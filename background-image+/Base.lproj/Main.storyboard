@@ -790,7 +790,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                         <viewControllerLayoutGuide type="bottom" id="j4T-vY-B5f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pcX-Dw-jc8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-d6-kwO">
@@ -803,6 +803,14 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                                     <action selector="uploadPicture:" destination="Sf5-Xy-gej" eventType="touchUpInside" id="FRQ-F1-xid"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXX-MC-ULm">
+                                <rect key="frame" x="239" y="525" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Sf5-Xy-gej" eventType="touchUpInside" id="q3F-b2-Pot"/>
+                                    <segue destination="vtM-cT-kkU" kind="modal" id="QDp-tg-FSX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -812,7 +820,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORH-eW-HBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="1783"/>
+            <point key="canvasLocation" x="217" y="1740"/>
         </scene>
         <!--Title-->
         <scene sceneID="rHB-rK-p66">
@@ -1389,7 +1397,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                                 </state>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="Xof-6P-cIV" eventType="touchUpInside" id="ILE-aE-Vlx"/>
-                                    <segue destination="vtM-cT-kkU" kind="modal" identifier="nextPage" id="9pj-0o-9cd"/>
+                                    <segue destination="Sf5-Xy-gej" kind="modal" identifier="nextPage" id="blC-Xs-trX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbG-Xc-2BC">
@@ -1931,20 +1939,20 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
         <image name="bulle2" width="1355" height="1282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qNs-JY-KIE"/>
-        <segue reference="OlJ-fu-qi5"/>
-        <segue reference="5F6-Ff-9Wb"/>
-        <segue reference="lQr-PE-ryg"/>
-        <segue reference="USa-gZ-k1K"/>
         <segue reference="Y2Y-0t-6Xl"/>
+        <segue reference="alR-Ea-70s"/>
+        <segue reference="emM-Of-BGO"/>
+        <segue reference="pm6-VY-sgn"/>
+        <segue reference="QDp-tg-FSX"/>
+        <segue reference="OlJ-fu-qi5"/>
+        <segue reference="qNs-JY-KIE"/>
         <segue reference="7ca-6P-2cW"/>
         <segue reference="pN6-Cw-aZM"/>
-        <segue reference="emM-Of-BGO"/>
         <segue reference="mgm-HP-ZFJ"/>
         <segue reference="MdA-5i-FZi"/>
         <segue reference="tkT-7B-uTS"/>
-        <segue reference="UvZ-iK-NGo"/>
-        <segue reference="hE4-R4-Pn7"/>
         <segue reference="7p3-BS-uIb"/>
+        <segue reference="hE4-R4-Pn7"/>
+        <segue reference="UvZ-iK-NGo"/>
     </inferredMetricsTieBreakers>
 </document>

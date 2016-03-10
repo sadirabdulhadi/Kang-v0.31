@@ -14,7 +14,6 @@
 		0B22EDDB1C7F3D1000CBF57D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDDA1C7F3D1000CBF57D /* SystemConfiguration.framework */; };
 		0B22EDDD1C7F3D2000CBF57D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDDC1C7F3D2000CBF57D /* libc++.tbd */; };
 		0B22EDDF1C7F3D2C00CBF57D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B22EDDE1C7F3D2C00CBF57D /* libicucore.tbd */; };
-		0B22EDE41C7F557D00CBF57D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */; };
 		0B29A7011C80F465001ED0C4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7001C80F465001ED0C4 /* Login.swift */; };
 		0B29A7031C8164E3001ED0C4 /* LoggedInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */; };
 		0B29A7051C82266E001ED0C4 /* QuestionCostPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */; };
@@ -42,6 +41,35 @@
 		0BE802071C67BC9E00E761A6 /* QuestionGenderPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */; };
 		0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */; };
 		0BE8020B1C67CF0600E761A6 /* signUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8020A1C67CF0600E761A6 /* signUpPage.swift */; };
+		0BEE93CA1C8F4EEE008BAD43 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93AC1C8F4EEE008BAD43 /* AsyncButton.swift */; };
+		0BEE93CB1C8F4EEE008BAD43 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93AD1C8F4EEE008BAD43 /* AsyncImageView.swift */; };
+		0BEE93CC1C8F4EEE008BAD43 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93AE1C8F4EEE008BAD43 /* AutoTextView.swift */; };
+		0BEE93CD1C8F4EEE008BAD43 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93AF1C8F4EEE008BAD43 /* BlurView.swift */; };
+		0BEE93CE1C8F4EEE008BAD43 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B01C8F4EEE008BAD43 /* DesignableButton.swift */; };
+		0BEE93CF1C8F4EEE008BAD43 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B11C8F4EEE008BAD43 /* DesignableImageView.swift */; };
+		0BEE93D01C8F4EEE008BAD43 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B21C8F4EEE008BAD43 /* DesignableLabel.swift */; };
+		0BEE93D11C8F4EEE008BAD43 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B31C8F4EEE008BAD43 /* DesignableTabBarController.swift */; };
+		0BEE93D21C8F4EEE008BAD43 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B41C8F4EEE008BAD43 /* DesignableTextField.swift */; };
+		0BEE93D31C8F4EEE008BAD43 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B51C8F4EEE008BAD43 /* DesignableTextView.swift */; };
+		0BEE93D41C8F4EEE008BAD43 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B61C8F4EEE008BAD43 /* DesignableView.swift */; };
+		0BEE93D51C8F4EEE008BAD43 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B71C8F4EEE008BAD43 /* ImageLoader.swift */; };
+		0BEE93D61C8F4EEE008BAD43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BEE93B81C8F4EEE008BAD43 /* Info.plist */; };
+		0BEE93D71C8F4EEE008BAD43 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93B91C8F4EEE008BAD43 /* KeyboardLayoutConstraint.swift */; };
+		0BEE93D81C8F4EEE008BAD43 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93BA1C8F4EEE008BAD43 /* LoadingView.swift */; };
+		0BEE93D91C8F4EEE008BAD43 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BEE93BB1C8F4EEE008BAD43 /* LoadingView.xib */; };
+		0BEE93DA1C8F4EEE008BAD43 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93BC1C8F4EEE008BAD43 /* Misc.swift */; };
+		0BEE93DB1C8F4EEE008BAD43 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93BD1C8F4EEE008BAD43 /* SoundPlayer.swift */; };
+		0BEE93DC1C8F4EEE008BAD43 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93BF1C8F4EEE008BAD43 /* Spring.swift */; };
+		0BEE93DD1C8F4EEE008BAD43 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C01C8F4EEE008BAD43 /* SpringAnimation.swift */; };
+		0BEE93DE1C8F4EEE008BAD43 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C11C8F4EEE008BAD43 /* SpringButton.swift */; };
+		0BEE93DF1C8F4EEE008BAD43 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C21C8F4EEE008BAD43 /* SpringImageView.swift */; };
+		0BEE93E01C8F4EEE008BAD43 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C31C8F4EEE008BAD43 /* SpringLabel.swift */; };
+		0BEE93E11C8F4EEE008BAD43 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C41C8F4EEE008BAD43 /* SpringTextField.swift */; };
+		0BEE93E21C8F4EEE008BAD43 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C51C8F4EEE008BAD43 /* SpringTextView.swift */; };
+		0BEE93E31C8F4EEE008BAD43 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C61C8F4EEE008BAD43 /* SpringView.swift */; };
+		0BEE93E41C8F4EEE008BAD43 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C71C8F4EEE008BAD43 /* TransitionManager.swift */; };
+		0BEE93E51C8F4EEE008BAD43 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C81C8F4EEE008BAD43 /* TransitionZoom.swift */; };
+		0BEE93E61C8F4EEE008BAD43 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE93C91C8F4EEE008BAD43 /* UnwindSegue.swift */; };
 		E27168DC1C8BC91900778E22 /* QuestionGenderTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27168DB1C8BC91900778E22 /* QuestionGenderTherapist.swift */; };
 		E27168DE1C8BC96800778E22 /* QuestionChildhoodTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27168DD1C8BC96800778E22 /* QuestionChildhoodTherapist.swift */; };
 		E27168E01C8BC9B600778E22 /* QuestionExpertTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27168DF1C8BC9B600778E22 /* QuestionExpertTherapist.swift */; };
@@ -82,7 +110,6 @@
 		0B22EDDA1C7F3D1000CBF57D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B22EDDC1C7F3D2000CBF57D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0B22EDDE1C7F3D2C00CBF57D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		0B29A7001C80F465001ED0C4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInfo.swift; sourceTree = "<group>"; };
 		0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCostPatient.swift; sourceTree = "<group>"; };
@@ -112,6 +139,36 @@
 		0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGenderPatient.swift; sourceTree = "<group>"; };
 		0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionChildhoodPatient.swift; sourceTree = "<group>"; };
 		0BE8020A1C67CF0600E761A6 /* signUpPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpPage.swift; sourceTree = "<group>"; };
+		0BEE93AC1C8F4EEE008BAD43 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		0BEE93AD1C8F4EEE008BAD43 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		0BEE93AE1C8F4EEE008BAD43 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
+		0BEE93AF1C8F4EEE008BAD43 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		0BEE93B01C8F4EEE008BAD43 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		0BEE93B11C8F4EEE008BAD43 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		0BEE93B21C8F4EEE008BAD43 /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		0BEE93B31C8F4EEE008BAD43 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
+		0BEE93B41C8F4EEE008BAD43 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		0BEE93B51C8F4EEE008BAD43 /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		0BEE93B61C8F4EEE008BAD43 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		0BEE93B71C8F4EEE008BAD43 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		0BEE93B81C8F4EEE008BAD43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BEE93B91C8F4EEE008BAD43 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		0BEE93BA1C8F4EEE008BAD43 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0BEE93BB1C8F4EEE008BAD43 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		0BEE93BC1C8F4EEE008BAD43 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		0BEE93BD1C8F4EEE008BAD43 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		0BEE93BE1C8F4EEE008BAD43 /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
+		0BEE93BF1C8F4EEE008BAD43 /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
+		0BEE93C01C8F4EEE008BAD43 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		0BEE93C11C8F4EEE008BAD43 /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		0BEE93C21C8F4EEE008BAD43 /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		0BEE93C31C8F4EEE008BAD43 /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
+		0BEE93C41C8F4EEE008BAD43 /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
+		0BEE93C51C8F4EEE008BAD43 /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
+		0BEE93C61C8F4EEE008BAD43 /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		0BEE93C71C8F4EEE008BAD43 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		0BEE93C81C8F4EEE008BAD43 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
+		0BEE93C91C8F4EEE008BAD43 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		E27168DB1C8BC91900778E22 /* QuestionGenderTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGenderTherapist.swift; sourceTree = "<group>"; };
 		E27168DD1C8BC96800778E22 /* QuestionChildhoodTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionChildhoodTherapist.swift; sourceTree = "<group>"; };
 		E27168DF1C8BC9B600778E22 /* QuestionExpertTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionExpertTherapist.swift; sourceTree = "<group>"; };
@@ -219,10 +276,10 @@
 				0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */,
 				0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */,
 				0BE8020A1C67CF0600E761A6 /* signUpPage.swift */,
-				0B22EDE31C7F557D00CBF57D /* UserInfoManager.swift */,
 				0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */,
 				0BCE551D1C6B8B4E0083A2BE /* QuestionThera3.swift */,
 				0BE801911C63CD5700E761A6 /* Images.xcassets */,
+				0BEE93AB1C8F4EEE008BAD43 /* Spring */,
 				0BE801931C63CD5700E761A6 /* LaunchScreen.xib */,
 				0BE801881C63CD5700E761A6 /* Supporting Files */,
 			);
@@ -256,6 +313,43 @@
 				0BE8019F1C63CD5700E761A6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BEE93AB1C8F4EEE008BAD43 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				0BEE93AC1C8F4EEE008BAD43 /* AsyncButton.swift */,
+				0BEE93AD1C8F4EEE008BAD43 /* AsyncImageView.swift */,
+				0BEE93AE1C8F4EEE008BAD43 /* AutoTextView.swift */,
+				0BEE93AF1C8F4EEE008BAD43 /* BlurView.swift */,
+				0BEE93B01C8F4EEE008BAD43 /* DesignableButton.swift */,
+				0BEE93B11C8F4EEE008BAD43 /* DesignableImageView.swift */,
+				0BEE93B21C8F4EEE008BAD43 /* DesignableLabel.swift */,
+				0BEE93B31C8F4EEE008BAD43 /* DesignableTabBarController.swift */,
+				0BEE93B41C8F4EEE008BAD43 /* DesignableTextField.swift */,
+				0BEE93B51C8F4EEE008BAD43 /* DesignableTextView.swift */,
+				0BEE93B61C8F4EEE008BAD43 /* DesignableView.swift */,
+				0BEE93B71C8F4EEE008BAD43 /* ImageLoader.swift */,
+				0BEE93B81C8F4EEE008BAD43 /* Info.plist */,
+				0BEE93B91C8F4EEE008BAD43 /* KeyboardLayoutConstraint.swift */,
+				0BEE93BA1C8F4EEE008BAD43 /* LoadingView.swift */,
+				0BEE93BB1C8F4EEE008BAD43 /* LoadingView.xib */,
+				0BEE93BC1C8F4EEE008BAD43 /* Misc.swift */,
+				0BEE93BD1C8F4EEE008BAD43 /* SoundPlayer.swift */,
+				0BEE93BE1C8F4EEE008BAD43 /* Spring.h */,
+				0BEE93BF1C8F4EEE008BAD43 /* Spring.swift */,
+				0BEE93C01C8F4EEE008BAD43 /* SpringAnimation.swift */,
+				0BEE93C11C8F4EEE008BAD43 /* SpringButton.swift */,
+				0BEE93C21C8F4EEE008BAD43 /* SpringImageView.swift */,
+				0BEE93C31C8F4EEE008BAD43 /* SpringLabel.swift */,
+				0BEE93C41C8F4EEE008BAD43 /* SpringTextField.swift */,
+				0BEE93C51C8F4EEE008BAD43 /* SpringTextView.swift */,
+				0BEE93C61C8F4EEE008BAD43 /* SpringView.swift */,
+				0BEE93C71C8F4EEE008BAD43 /* TransitionManager.swift */,
+				0BEE93C81C8F4EEE008BAD43 /* TransitionZoom.swift */,
+				0BEE93C91C8F4EEE008BAD43 /* UnwindSegue.swift */,
+			);
+			path = Spring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +439,9 @@
 			files = (
 				0BCE55111C6B75100083A2BE /* AdobeHeitiStd-Regular.otf in Resources */,
 				0BCE55131C6B75250083A2BE /* STHeiti Light.ttc in Resources */,
+				0BEE93D61C8F4EEE008BAD43 /* Info.plist in Resources */,
 				0BE801F21C6525AB00E761A6 /* Main.storyboard in Resources */,
+				0BEE93D91C8F4EEE008BAD43 /* LoadingView.xib in Resources */,
 				0BE801951C63CD5700E761A6 /* LaunchScreen.xib in Resources */,
 				0BE801921C63CD5700E761A6 /* Images.xcassets in Resources */,
 			);
@@ -381,27 +477,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEE93DD1C8F4EEE008BAD43 /* SpringAnimation.swift in Sources */,
 				E27168DE1C8BC96800778E22 /* QuestionChildhoodTherapist.swift in Sources */,
 				0BCE55171C6B7CBE0083A2BE /* QuestionDirectiveThera.swift in Sources */,
 				0BCE551E1C6B8B4E0083A2BE /* QuestionThera3.swift in Sources */,
 				0B29A7031C8164E3001ED0C4 /* LoggedInInfo.swift in Sources */,
+				0BEE93CC1C8F4EEE008BAD43 /* AutoTextView.swift in Sources */,
+				0BEE93E51C8F4EEE008BAD43 /* TransitionZoom.swift in Sources */,
+				0BEE93D81C8F4EEE008BAD43 /* LoadingView.swift in Sources */,
+				0BEE93D71C8F4EEE008BAD43 /* KeyboardLayoutConstraint.swift in Sources */,
+				0BEE93CF1C8F4EEE008BAD43 /* DesignableImageView.swift in Sources */,
+				0BEE93CD1C8F4EEE008BAD43 /* BlurView.swift in Sources */,
+				0BEE93D51C8F4EEE008BAD43 /* ImageLoader.swift in Sources */,
 				0BE802051C66AF3300E761A6 /* QuestionEthnicityPatient.swift in Sources */,
+				0BEE93E11C8F4EEE008BAD43 /* SpringTextField.swift in Sources */,
 				0BE8018D1C63CD5700E761A6 /* ViewController.swift in Sources */,
 				0B3C4EFE1C8C76FF00F56ED4 /* PickImage.swift in Sources */,
+				0BEE93DE1C8F4EEE008BAD43 /* SpringButton.swift in Sources */,
+				0BEE93DB1C8F4EEE008BAD43 /* SoundPlayer.swift in Sources */,
+				0BEE93D01C8F4EEE008BAD43 /* DesignableLabel.swift in Sources */,
+				0BEE93D21C8F4EEE008BAD43 /* DesignableTextField.swift in Sources */,
+				0BEE93E31C8F4EEE008BAD43 /* SpringView.swift in Sources */,
 				0BD3326A1C76272100E5F31D /* QuestionExpertPatient.swift in Sources */,
 				0B29A70D1C8745AF001ED0C4 /* SignUpThera.swift in Sources */,
 				0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */,
+				0BEE93D31C8F4EEE008BAD43 /* DesignableTextView.swift in Sources */,
+				0BEE93E41C8F4EEE008BAD43 /* TransitionManager.swift in Sources */,
+				0BEE93D41C8F4EEE008BAD43 /* DesignableView.swift in Sources */,
 				E27168E21C8BCAC900778E22 /* QuestionCostTherapist.swift in Sources */,
 				0B29A7011C80F465001ED0C4 /* Login.swift in Sources */,
 				0B29A7071C822BA0001ED0C4 /* QuestionLocationTherapist.swift in Sources */,
 				0BE8020B1C67CF0600E761A6 /* signUpPage.swift in Sources */,
+				0BEE93E01C8F4EEE008BAD43 /* SpringLabel.swift in Sources */,
+				0BEE93CA1C8F4EEE008BAD43 /* AsyncButton.swift in Sources */,
+				0BEE93DC1C8F4EEE008BAD43 /* Spring.swift in Sources */,
 				E27168E01C8BC9B600778E22 /* QuestionExpertTherapist.swift in Sources */,
 				E27168E41C8BCB2100778E22 /* QuestionLocationPatient.swift in Sources */,
-				0B22EDE41C7F557D00CBF57D /* UserInfoManager.swift in Sources */,
+				0BEE93E61C8F4EEE008BAD43 /* UnwindSegue.swift in Sources */,
+				0BEE93DF1C8F4EEE008BAD43 /* SpringImageView.swift in Sources */,
+				0BEE93CB1C8F4EEE008BAD43 /* AsyncImageView.swift in Sources */,
+				0BEE93DA1C8F4EEE008BAD43 /* Misc.swift in Sources */,
 				0BCE551B1C6B81010083A2BE /* QuestionEthnicityThera.swift in Sources */,
+				0BEE93E21C8F4EEE008BAD43 /* SpringTextView.swift in Sources */,
 				E27168DC1C8BC91900778E22 /* QuestionGenderTherapist.swift in Sources */,
+				0BEE93CE1C8F4EEE008BAD43 /* DesignableButton.swift in Sources */,
 				0BE802071C67BC9E00E761A6 /* QuestionGenderPatient.swift in Sources */,
 				0BE802031C66AF2300E761A6 /* QuestionDirectivePatient.swift in Sources */,
+				0BEE93D11C8F4EEE008BAD43 /* DesignableTabBarController.swift in Sources */,
 				0BE8018B1C63CD5700E761A6 /* AppDelegate.swift in Sources */,
 				0B29A7051C82266E001ED0C4 /* QuestionCostPatient.swift in Sources */,
 			);

@@ -11,6 +11,7 @@ import Firebase
 
 class QuestionCostPatient: UIViewController {
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
+    var refpsy = Firebase(url:"https://boiling-heat-1824.firebaseio.com/users/therapists")
     var sliderValue = 75
     
     @IBOutlet weak var score: UILabel!
@@ -30,7 +31,12 @@ class QuestionCostPatient: UIViewController {
             } else {
                 let cost = ["cost":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(cost)                          }
+                usersRef.updateChildValues(cost)
+                var sadir = self.refpsy.queryOrderedByChild("Childhood").queryEqualToValue(5)
+                sadir.observeEventType(.ChildAdded, withBlock: { snapshot in
+                        print(snapshot.key)})
+
+            }
         }                    }
     
     override func viewDidLoad() {

@@ -16,6 +16,7 @@ class Login: UIViewController {
     @IBOutlet weak var password: UITextField!
     var username = ""
     var pass = ""
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }

@@ -1,15 +1,15 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DD9533A23DA77F72787ACA012A4804890BF2365E",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6C5DF2ED8F9E275DBF696B5CF79E582C7F5A5CA8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "DD9533A23DA77F72787ACA012A4804890BF2365E" : 0,
+    "6C5DF2ED8F9E275DBF696B5CF79E582C7F5A5CA8" : 0,
     "E54D0737FBCD3BF3059E1A9B6929002FC1003D5D" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "02CBB237-628C-4716-A55D-0172EFD6A770",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "DD9533A23DA77F72787ACA012A4804890BF2365E" : "Kang-v0.3\/",
+    "6C5DF2ED8F9E275DBF696B5CF79E582C7F5A5CA8" : "Kang-v0.3\/",
     "E54D0737FBCD3BF3059E1A9B6929002FC1003D5D" : "Kang-v0.0"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Kang",
@@ -19,7 +19,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sadirabdulhadi\/Kang-v0.3.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD9533A23DA77F72787ACA012A4804890BF2365E"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6C5DF2ED8F9E275DBF696B5CF79E582C7F5A5CA8"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sadirabdulhadi\/Kang-v0.0.git",
