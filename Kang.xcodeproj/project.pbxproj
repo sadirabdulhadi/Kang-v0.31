@@ -20,6 +20,7 @@
 		0B29A7071C822BA0001ED0C4 /* QuestionLocationTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */; };
 		0B29A70D1C8745AF001ED0C4 /* SignUpThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */; };
 		0B3C4EFE1C8C76FF00F56ED4 /* PickImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */; };
+		0B9A023B1C9990B100C4F0C3 /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */; };
 		0BCE55111C6B75100083A2BE /* AdobeHeitiStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */; };
 		0BCE55131C6B75250083A2BE /* STHeiti Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */; };
 		0BCE55171C6B7CBE0083A2BE /* QuestionDirectiveThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */; };
@@ -116,6 +117,7 @@
 		0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionLocationTherapist.swift; sourceTree = "<group>"; };
 		0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpThera.swift; sourceTree = "<group>"; };
 		0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickImage.swift; sourceTree = "<group>"; };
+		0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 		0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
 		0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti Light.ttc"; sourceTree = "<group>"; };
 		0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDirectiveThera.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				0B3C4EFB1C8C687D00F56ED4 /* Therapist Questions */,
 				0B3C4EFC1C8C68C800F56ED4 /* Patient Questions */,
 				0BE8018A1C63CD5700E761A6 /* AppDelegate.swift */,
+				0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */,
 				0BE801F01C6525AB00E761A6 /* Main.storyboard */,
 				0BE8018C1C63CD5700E761A6 /* ViewController.swift */,
 				0B29A7001C80F465001ED0C4 /* Login.swift */,
@@ -499,6 +502,7 @@
 				0BEE93D21C8F4EEE008BAD43 /* DesignableTextField.swift in Sources */,
 				0BEE93E31C8F4EEE008BAD43 /* SpringView.swift in Sources */,
 				0BD3326A1C76272100E5F31D /* QuestionExpertPatient.swift in Sources */,
+				0B9A023B1C9990B100C4F0C3 /* MatchingAlgorithm.swift in Sources */,
 				0B29A70D1C8745AF001ED0C4 /* SignUpThera.swift in Sources */,
 				0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */,
 				0BEE93D31C8F4EEE008BAD43 /* DesignableTextView.swift in Sources */,

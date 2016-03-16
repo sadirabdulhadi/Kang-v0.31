@@ -32,12 +32,10 @@ class QuestionCostPatient: UIViewController {
                 let cost = ["cost":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 usersRef.updateChildValues(cost)
-                var sadir = self.refpsy.queryOrderedByChild("Childhood").queryEqualToValue(5)
-                sadir.observeEventType(.ChildAdded, withBlock: { snapshot in
-                        print(snapshot.key)})
 
-            }
-        }                    }
+
+        
+            }}}
     
     override func viewDidLoad() {
         super.viewDidLoad()
