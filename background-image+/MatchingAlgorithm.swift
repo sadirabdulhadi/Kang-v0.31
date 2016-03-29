@@ -1,7 +1,9 @@
-import UIKit
+/*import UIKit
 import Firebase
 
+
 class MatchingAlgorithm: UIViewController {
+    var userChildhood : AnyObject
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
     var refpsy = Firebase(url:"https://boiling-heat-1824.firebaseio.com/users/therapists")
 
@@ -13,20 +15,30 @@ class MatchingAlgorithm: UIViewController {
     if error != nil {
     print("error")
     } else {
- var refUser = self.ref.childByAppendingPath("users")
+    var refUser = self.ref.childByAppendingPath("users")
             .childByAppendingPath("patients").childByAppendingPath(authData.uid)
-
  
- var userChildhood = refUser.childByAppendingPath("Childhood")
- var userEthnicity = refUser.childByAppendingPath("Ethnicity")
- var userExpertise = refUser.childByAppendingPath("Expertise")
- var userGender = refUser.childByAppendingPath("Gender")
- var userLocation = refUser.childByAppendingPath("Location")
- var userCost = refUser.childByAppendingPath("cost")
- var userDirective = refUser.childByAppendingPath("directive")
+ var finalList = self.refpsy
+
+//filterbychildhoodvalues
+ var userChildhoodPath = refUser.childByAppendingPath("Childhood")
+ userChildhoodPath.observeEventType(.Value, withBlock: { snapshot in
+             userChildhood = snapshot.value
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+ print(userChildhood)
+        }}}}
+
+ var userEthnicityPath = refUser.childByAppendingPath("Ethnicity")
+ var userExpertisePath = refUser.childByAppendingPath("Expertise")
+ var userGenderPath = refUser.childByAppendingPath("Gender")
+ var userLocationPath = refUser.childByAppendingPath("Location")
+ var userCostPath = refUser.childByAppendingPath("cost")
+ var userDirectiveOath = refUser.childByAppendingPath("directive")
 
 
- var finalList = self.refpsy.queryOrderedByChild("Ethnicity").queryEqualToValue(userEthnicity)
+ var finalList = finalList.queryOrderedByChild("Ethnicity").queryEqualToValue(userEthnicity)
  finalList = finalList.queryOrderedByChild("Expertise").queryEqualToValue(userExpertise)
  finalList = finalList.queryOrderedByChild("Gender").queryEqualToValue(userGender)
  finalList = finalList.queryOrderedByChild("Location").queryEqualToValue(userLocation)
@@ -36,4 +48,4 @@ class MatchingAlgorithm: UIViewController {
     finalList.observeEventType(.ChildAdded, withBlock: { snapshot in
             print(snapshot.key)})
         
-        }}}}
+        }}}*/

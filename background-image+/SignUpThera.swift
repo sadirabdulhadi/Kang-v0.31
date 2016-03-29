@@ -39,9 +39,11 @@ class signUpThera: UIViewController {
         else {return true}
     }
 
-    @IBAction func backButtonTapped(sender: AnyObject){
-                performSegueWithIdentifier("lastPage", sender: nil)
+    @IBAction func backPressed(sender: AnyObject) {
+        performSegueWithIdentifier("lastPage", sender: nil)
     }
+
+
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         
