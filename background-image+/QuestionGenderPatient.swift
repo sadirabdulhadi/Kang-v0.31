@@ -21,7 +21,7 @@ class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["I don't mind", "Male", "Female", "Transgendered (male to female)","Transgendered (female to male)", "I would rather not say"]
+        pickerData = ["I don't mind", "Male", "Female", "Transgendered (male to female)","Transgendered (female to male)"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +52,8 @@ class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
                 print("error")
             } else {
                 let gender = ["Gender": self.data]
+                var index = self.pickerData.indexOf(self.data)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 10000)
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 usersRef.updateChildValues(gender)                          }
         }                    }

@@ -21,7 +21,7 @@ class QuestionEthnicityPatient: UIViewController, UIPickerViewDelegate, UIPicker
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["I don't mind", "South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other", "I would rather not say"]
+        pickerData = ["I don't mind", "South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,6 +36,8 @@ class QuestionEthnicityPatient: UIViewController, UIPickerViewDelegate, UIPicker
                 print("error")
             } else {
                 let ethnicity = ["Ethnicity": self.data]
+                var index = self.pickerData.indexOf(self.data)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 100000)
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 usersRef.updateChildValues(ethnicity)                          }
         }                    }

@@ -22,7 +22,7 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["No,I have multiple issues", "No, not sure about the issues", "Anxiety", "Behavioural control", "Bereavement", "Depression", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues", "Stress" ]
+        pickerData = ["No, multiple or complex issues", "Behavioural control", "Bereavement", "Anxiety, depression or stress", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,8 +37,10 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
                 print("error")
             } else {
                 let gender = ["Expertise": self.data]
+                var index = self.pickerData.indexOf(self.data)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 100)
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)                          }
+                usersRef.updateChildValues(gender)}
         }                    }
 
     // The number of columns of data

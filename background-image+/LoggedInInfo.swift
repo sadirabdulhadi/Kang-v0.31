@@ -10,6 +10,7 @@ private let _SingletonSharedInstance = LoggedInInfo()
 class LoggedInInfo  {
     var username = ""
     var pass = ""
+    var score = 0
     
     class var sharedInstance : LoggedInInfo {
         return _SingletonSharedInstance

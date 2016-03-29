@@ -29,6 +29,7 @@ class QuestionChildhoodPatient: UIViewController {
                 print("error")
             } else {
                 let childhood = ["Childhood":self.sliderValue]
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (self.sliderValue * 1000)
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 usersRef.updateChildValues(childhood)                          }
         }                    }
