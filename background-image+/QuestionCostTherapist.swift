@@ -30,7 +30,11 @@ class QuestionCostTherapist: UIViewController {
             } else {
                 let cost = ["cost":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(cost)                          }
+                usersRef.updateChildValues(cost)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + 1
+                print(LoggedInInfo.sharedInstance.score)
+                let score = ["Score":LoggedInInfo.sharedInstance.score]
+                usersRef.updateChildValues(score)}
         }                    }
     
     override func viewDidLoad() {

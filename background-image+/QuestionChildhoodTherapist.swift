@@ -28,9 +28,11 @@ class QuestionChildhoodTherapist: UIViewController {
             if error != nil {
                 print("error")
             } else {
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (self.sliderValue * 1000)
                 let childhood = ["Childhood":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(childhood)                          }
+                usersRef.updateChildValues(childhood)
+                }
         }                    }
     
     override func viewDidLoad() {

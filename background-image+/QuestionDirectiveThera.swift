@@ -34,7 +34,8 @@ class QuestionDirectiveThera: UIViewController {
             } else {
                 let directive = ["directive":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(directive)                          }
+                usersRef.updateChildValues(directive)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (self.sliderValue * 1000000)}
         }                    }
     
 

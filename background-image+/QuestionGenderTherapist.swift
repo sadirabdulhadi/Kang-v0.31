@@ -12,7 +12,7 @@ import Firebase
 class QuestionGenderTherapist: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     @IBOutlet weak var picker: UIPickerView!
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    var data="I don't mind"
+    var data="I would rather not say"
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class QuestionGenderTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["I don't mind", "Male", "Female", "Transgendered (male to female)","Transgendered (female to male)", "I would rather not say"]
+        pickerData = ["I would rather not say", "Male", "Female", "Transgendered (male to female)","Transgendered (female to male)"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,6 +51,8 @@ class QuestionGenderTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
             if error != nil {
                 print("error")
             } else {
+                var index = self.pickerData.indexOf(self.data)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 10000)
                 let gender = ["Gender": self.data]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
                 usersRef.updateChildValues(gender)                          }

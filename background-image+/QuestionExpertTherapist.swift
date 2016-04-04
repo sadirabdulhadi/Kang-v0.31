@@ -12,7 +12,7 @@ class QuestionExpertTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    var data="No,I have multiple issues"
+    var data="Behavioural control"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class QuestionExpertTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["Anxiety", "Behavioural control", "Bereavement", "Depression", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues", "Stress" ]
+        pickerData = ["Behavioural control", "Bereavement", "Anxiety, depression or stress", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,7 +37,10 @@ class QuestionExpertTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
             } else {
                 let gender = ["Expertise": self.data]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)                          }
+                usersRef.updateChildValues(gender)
+                var index = self.pickerData.indexOf(self.data)! + 1
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index * 100)
+}
         }                    }
     
     // The number of columns of data

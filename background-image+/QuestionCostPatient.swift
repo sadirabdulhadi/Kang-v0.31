@@ -14,8 +14,7 @@ class QuestionCostPatient: UIViewController {
     var refpsy = Firebase(url:"https://boiling-heat-1824.firebaseio.com/users/therapists")
     var sliderValue = 75
     
-    var userChildhood : AnyObject!
-    var userEthnicity : AnyObject!
+    var userScore: AnyObject!
 
     
     @IBOutlet weak var score: UILabel!
@@ -44,38 +43,24 @@ class QuestionCostPatient: UIViewController {
                 let score = ["Score":LoggedInInfo.sharedInstance.score]
                 usersRef.updateChildValues(score)
                 print(LoggedInInfo.sharedInstance.score);
-               /*
+               
                 //childhood
                 
                 //step A : find the path to childhood
-                let userChildhoodPath = usersRef.childByAppendingPath("Childhood")
+                let userScorePath = usersRef.childByAppendingPath("Score")
                 
                 //step B : grab the value of childhood
-                userChildhoodPath.observeEventType(.Value, withBlock: { snapshot in
-                    self.userChildhood = snapshot.value
+                userScorePath.observeEventType(.Value, withBlock: { snapshot in
+                    self.userScore = snapshot.value
                     }, withCancelBlock: { error in
                         print(error.description)
                 })
                 
-                //ethnicity
-                //step A : find the path to childhood
-                let userEthnicityPath = usersRef.childByAppendingPath("Ethnicity")
-                
-                //step B : grab the value of childhood
-                userEthnicityPath.observeEventType(.Value, withBlock: { snapshot in
-                    self.userEthnicity = snapshot.value
-                    }, withCancelBlock: { error in
-                        print(error.description)
-                })
 
-                
-                
-
-                var matching = finalList.queryOrderedByChild("Childhood").queryEqualToValue(self.userChildhood)
-                matching = matching.queryOrderedByChild("Ethnicity").queryEqualToValue(self.userEthnicity)
+                var matching = finalList.queryOrderedByChild("Score").queryEqualToValue(self.userScore)
                 
                 matching.observeEventType(.ChildAdded, withBlock: { snapshot in
-                    print(snapshot.key)})*/
+                    print(snapshot.key)})
 
 
 

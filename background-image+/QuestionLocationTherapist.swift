@@ -39,6 +39,8 @@ class QuestionLocationTherapist: UIViewController, UIPickerViewDelegate, UIPicke
             } else {
                 let location = ["Location": self.data]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
+                var index = self.pickerData.indexOf(self.data)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 10)
                 usersRef.updateChildValues(location)                          }
         }                    }
     

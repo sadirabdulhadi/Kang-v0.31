@@ -13,7 +13,7 @@ class QuestionEthnicityThera: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    var data="South Asian"
+    var data="I would rather not say"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class QuestionEthnicityThera: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other", "I would rather not say"]
+        pickerData = ["I would rather not say", "South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other"]
     }
     
     @IBAction func nextPressed(sender: AnyObject) {
@@ -31,6 +31,8 @@ class QuestionEthnicityThera: UIViewController, UIPickerViewDelegate, UIPickerVi
             if error != nil {
                 print("error")
             } else {
+                var index = self.pickerData.indexOf(self.data)
+                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 100000)
                 let ethnicity = ["Ethnicity": self.data]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
                 usersRef.updateChildValues(ethnicity)                          }
