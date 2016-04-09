@@ -88,6 +88,7 @@
             <string>STHeitiSC-Light</string>
             <string>STHeitiSC-Light</string>
             <string>STHeitiSC-Light</string>
+            <string>STHeitiSC-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -512,7 +513,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
         <!--Title-->
         <scene sceneID="70O-Oe-VQx">
             <objects>
-                <viewController id="mpA-lE-ZrJ" customClass="QuestionEthnicityPatient" customModule="Kang" sceneMemberID="viewController">
+                <viewController id="mpA-lE-ZrJ" customClass="QuestionReligionPatient" customModule="Kang" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dHs-eu-cWG"/>
                         <viewControllerLayoutGuide type="bottom" id="b6G-tl-Rmz"/>
@@ -826,7 +827,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
         <!--Title-->
         <scene sceneID="rHB-rK-p66">
             <objects>
-                <viewController id="8qa-i9-pGp" customClass="QuestionEthnicityThera" customModule="Kang" sceneMemberID="viewController">
+                <viewController id="8qa-i9-pGp" customClass="QuestionReligionThera" customModule="Kang" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D8B-cL-Auf"/>
                         <viewControllerLayoutGuide type="bottom" id="4pF-zD-YHt"/>
@@ -1414,8 +1415,8 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonTapped:" destination="Xof-6P-cIV" eventType="touchUpInside" id="R6l-Pz-IBT"/>
-                                    <segue destination="i3u-SN-70u" kind="modal" identifier="lastPage" id="E4A-Oz-Ysu"/>
+                                    <action selector="backButtonPressed:" destination="Xof-6P-cIV" eventType="touchUpInside" id="xVA-lz-1VP"/>
+                                    <segue destination="i3u-SN-70u" kind="modal" identifier="lastPage" id="tpy-hE-gcH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1844,6 +1845,38 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
             </objects>
             <point key="canvasLocation" x="3336.5" y="1216.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1GQ-8o-Tqo">
+            <objects>
+                <viewController id="cgX-0g-6Dc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hgb-Nd-RPc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ccb-rV-9gQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nMA-ht-6Gj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Matches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKX-MS-87S">
+                                <rect key="frame" x="69" y="20" width="236" height="44"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="puY-oB-Rjl">
+                                <rect key="frame" x="56" y="102" width="241" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rF-7t-kzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3762.5" y="1216.5"/>
+        </scene>
         <!--Title-->
         <scene sceneID="CFZ-gG-h4n">
             <objects>
@@ -1941,21 +1974,21 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
         <image name="bulle2" width="1355" height="1282"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="alR-Ea-70s"/>
-        <segue reference="emM-Of-BGO"/>
-        <segue reference="E4A-Oz-Ysu"/>
+        <segue reference="UvZ-iK-NGo"/>
+        <segue reference="tpy-hE-gcH"/>
         <segue reference="pm6-VY-sgn"/>
-        <segue reference="QDp-tg-FSX"/>
+        <segue reference="emM-Of-BGO"/>
+        <segue reference="alR-Ea-70s"/>
+        <segue reference="pN6-Cw-aZM"/>
+        <segue reference="7ca-6P-2cW"/>
+        <segue reference="i9J-Qs-FcK"/>
+        <segue reference="tkT-7B-uTS"/>
+        <segue reference="mgm-HP-ZFJ"/>
+        <segue reference="MdA-5i-FZi"/>
+        <segue reference="5F6-Ff-9Wb"/>
         <segue reference="OlJ-fu-qi5"/>
         <segue reference="qNs-JY-KIE"/>
-        <segue reference="Y2Y-0t-6Xl"/>
-        <segue reference="7ca-6P-2cW"/>
-        <segue reference="pN6-Cw-aZM"/>
+        <segue reference="uYA-gp-w5K"/>
         <segue reference="7p3-BS-uIb"/>
-        <segue reference="hE4-R4-Pn7"/>
-        <segue reference="UvZ-iK-NGo"/>
-        <segue reference="MdA-5i-FZi"/>
-        <segue reference="mgm-HP-ZFJ"/>
-        <segue reference="tkT-7B-uTS"/>
     </inferredMetricsTieBreakers>
 </document>

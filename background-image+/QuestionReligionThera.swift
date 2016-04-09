@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class QuestionEthnicityThera: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class QuestionReligionThera: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
@@ -22,21 +22,14 @@ class QuestionEthnicityThera: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["I would rather not say", "South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other"]
+        pickerData = ["I would rather not say", "Christian", "Muslim", "Hindu", "Jewish", "Sikh", "Buddism", "Folk Religions", "Atheist/No-religion", "Other"]
     }
     
     @IBAction func nextPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                var index = self.pickerData.indexOf(self.data)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 100000)
-                let ethnicity = ["Ethnicity": self.data]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(ethnicity)                          }
-        }                    }
+        var index = self.pickerData.indexOf(self.data)
+        AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + ((index!-AnswersTherapists.sharedInstance.religion) * 100000)
+        AnswersTherapists.sharedInstance.religion = index!
+        AnswersTherapists.sharedInstance.answers["Religion"] = self.data        }
 
 
     override func didReceiveMemoryWarning() {

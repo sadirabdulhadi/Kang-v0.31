@@ -14,6 +14,8 @@ class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
     var data="I don't mind"
     var pickerData: [String] = [String]()
+    var oldAnswer = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,17 +48,13 @@ class QuestionGenderPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func pressedNext(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let gender = ["Gender": self.data]
+
                 var index = self.pickerData.indexOf(self.data)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 10000)
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)                          }
-        }                    }
+                OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + ((index!-OldAnswersPatients.sharedInstance.gender) * 10000)
+                OldAnswersPatients.sharedInstance.gender = index!
+ 
+                OldAnswersPatients.sharedInstance.answers["Gender"] = self.data
+        }
 
         
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

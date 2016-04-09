@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 
-class QuestionEthnicityPatient: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class QuestionReligionPatient: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
     var data="I don't mind"
+    var oldAnswer = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +23,7 @@ class QuestionEthnicityPatient: UIViewController, UIPickerViewDelegate, UIPicker
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["I don't mind", "South Asian", "East Asian", "Hispanic", "Caucasian", "Black", "Middle Eastern/North African","Other"]
+        pickerData = ["I don't mind", "Christian", "Muslim", "Hindu", "Jewish", "Sikh", "Buddism", "Folk Religions", "Atheist/No-religion", "Other"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,17 +32,11 @@ class QuestionEthnicityPatient: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     @IBAction func nextPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let ethnicity = ["Ethnicity": self.data]
                 var index = self.pickerData.indexOf(self.data)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 100000)
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(ethnicity)                          }
-        }                    }
+                OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + ((index!-OldAnswersPatients.sharedInstance.religion) * 100000)
+                OldAnswersPatients.sharedInstance.religion = index!
+                OldAnswersPatients.sharedInstance.answers["Religion"] = self.data
+        }
     
 
         

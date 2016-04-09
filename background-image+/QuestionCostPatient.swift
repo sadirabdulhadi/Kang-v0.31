@@ -12,9 +12,9 @@ import Firebase
 class QuestionCostPatient: UIViewController {
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
     var refpsy = Firebase(url:"https://boiling-heat-1824.firebaseio.com/users/therapists")
-    var sliderValue = 75
-    
+    var sliderValue = 75    
     var userScore: AnyObject!
+    var temp = [[String]]()
 
     
     @IBOutlet weak var score: UILabel!
@@ -33,44 +33,43 @@ class QuestionCostPatient: UIViewController {
             if error != nil {
                 print("error")
             } else {
-                //save the value of the cost
-                let cost = ["cost":self.sliderValue]
-                //find the path of logged in user
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                //update the value of cost
-                usersRef.updateChildValues(cost)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + 1
-                let score = ["Score":LoggedInInfo.sharedInstance.score]
-                usersRef.updateChildValues(score)
-                print(LoggedInInfo.sharedInstance.score);
-               
-                //childhood
+                OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + 1
+                OldAnswersPatients.sharedInstance.answers["Childhood"] = String(self.sliderValue)
+                OldAnswersPatients.sharedInstance.answers["Score"] = String(OldAnswersPatients.sharedInstance.score)
+                //let score = ["Score":LoggedInInfo.sharedInstance.score]
+                usersRef.setValue( OldAnswersPatients.sharedInstance.answers)
                 
-                //step A : find the path to childhood
+                //step A : find the path to score
                 let userScorePath = usersRef.childByAppendingPath("Score")
                 
-                //step B : grab the value of childhood
+                //step B : grab the value of score
                 userScorePath.observeEventType(.Value, withBlock: { snapshot in
-                    self.userScore = snapshot.value
+                    print(snapshot.value)
                     }, withCancelBlock: { error in
                         print(error.description)
                 })
-                
-
-                var matching = finalList.queryOrderedByChild("Score").queryEqualToValue(self.userScore)
+                 self.userScore=OldAnswersPatients.sharedInstance.score
+             
+                var matching = finalList.queryOrderedByChild("Score").queryEqualToValue(String(self.userScore))
                 
                 matching.observeEventType(.ChildAdded, withBlock: { snapshot in
-                    print(snapshot.key)})
-
-
-
-        
-            }}}
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+                    var tempItems = [String]()
+                    
+                    for item in snapshot.children.allObjects as! [FDataSnapshot] {
+                        let dict = item.value as! (String)
+                        tempItems.append(dict)
+                    }
+                    
+                    self.temp.append(tempItems)
+                    print(snapshot)
+                    print(self.temp)
+                    
+                })}
+}
     }
     
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

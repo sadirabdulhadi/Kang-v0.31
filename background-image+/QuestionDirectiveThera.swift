@@ -27,16 +27,10 @@ class QuestionDirectiveThera: UIViewController {
     
     
     @IBAction func nextPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let directive = ["directive":self.sliderValue]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(directive)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (self.sliderValue * 1000000)}
-        }                    }
+        AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + ((self.sliderValue-AnswersTherapists.sharedInstance.directive ) * 1000000)
+        AnswersTherapists.sharedInstance.directive = self.sliderValue
+        AnswersTherapists.sharedInstance.answers["Directive"] = String(self.sliderValue)
+        }
     
 
     

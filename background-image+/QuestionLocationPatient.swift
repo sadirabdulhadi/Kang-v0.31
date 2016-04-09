@@ -32,17 +32,11 @@ class QuestionLocationPatient: UIViewController, UIPickerViewDelegate, UIPickerV
     
     
     @IBAction func nextPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let location = ["Location": self.data]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 var index = self.pickerData.indexOf(self.data)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 10)
-                usersRef.updateChildValues(location)                          }
-        }                    }
+                OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + ((index!-OldAnswersPatients.sharedInstance.location) * 10)
+                OldAnswersPatients.sharedInstance.location = index!
+                OldAnswersPatients.sharedInstance.answers["Location"] = self.data
+    }
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

@@ -12,7 +12,6 @@ import Firebase
 
 class PickImage: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     let ref = Firebase(url: "https://boiling-heat-1824.firebaseio.com")
-    var base64String: NSString! = "lo"
     var newImage: UIImage!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -52,11 +51,9 @@ class PickImage: UIViewController,UIImagePickerControllerDelegate, UINavigationC
                 print("error")
             } else {
                 if self.newImage != nil {
-                var imageData: NSData = UIImagePNGRepresentation(self.newImage)!
-                self.base64String = imageData.base64EncodedStringWithOptions([])
-                var quoteString = ["image":self.base64String]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(quoteString)
+                var imageData: NSData = UIImageJPEGRepresentation(self.newImage,0.1)!
+                AnswersTherapists.sharedInstance.answers["Image"] = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+
                 }
             }}}
     

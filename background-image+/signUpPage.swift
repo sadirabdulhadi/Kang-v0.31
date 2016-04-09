@@ -81,6 +81,7 @@ class signUpPage: UIViewController {
                                 LoggedInInfo.sharedInstance.pass=self.password
 
                                 let newUser = ["email": self.userEmail]
+                                OldAnswersPatients.sharedInstance.answers["Mail"] = self.userEmail
                                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                                 usersRef.updateChildValues(newUser)
                                 self.performSegueWithIdentifier("nextPage", sender: nil)}

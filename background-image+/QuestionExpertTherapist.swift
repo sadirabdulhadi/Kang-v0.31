@@ -30,18 +30,13 @@ class QuestionExpertTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func nextPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let gender = ["Expertise": self.data]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)
-                var index = self.pickerData.indexOf(self.data)! + 1
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index * 100)
+        var index = self.pickerData.indexOf(self.data)! + 1
+        AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + ((index-AnswersTherapists.sharedInstance.expertise) * 100)
+        AnswersTherapists.sharedInstance.expertise = index
+        AnswersTherapists.sharedInstance.answers["Expertise"] = self.data
+
 }
-        }                    }
+
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

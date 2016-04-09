@@ -39,11 +39,10 @@ class signUpThera: UIViewController {
         else {return true}
     }
 
-    @IBAction func backPressed(sender: AnyObject) {
+
+    @IBAction func backButtonPressed(sender: AnyObject) {
         performSegueWithIdentifier("lastPage", sender: nil)
     }
-
-
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         
@@ -87,10 +86,10 @@ class signUpThera: UIViewController {
                             } else {
                                 LoggedInInfo.sharedInstance.username=self.email
                                 LoggedInInfo.sharedInstance.pass=self.password
-                                
-                                let newUser = ["name": self.name, "email":self.email, "phone": self.phone, "membership":self.membership ]
-                                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                                usersRef.updateChildValues(newUser)
+                                AnswersTherapists.sharedInstance.answers["Name"] = self.name
+                                AnswersTherapists.sharedInstance.answers["Email"] = self.email
+                                AnswersTherapists.sharedInstance.answers["Phone"] = self.phone
+                                AnswersTherapists.sharedInstance.answers["Membership"] = self.membership
                                 self.performSegueWithIdentifier("nextPage", sender: nil)}
                         }                    }
                     

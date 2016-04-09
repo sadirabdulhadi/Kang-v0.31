@@ -23,16 +23,10 @@ class QuestionDirectivePatient: UIViewController {
     }
     
     @IBAction func next(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let directive = ["directive":self.sliderValue]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(directive)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (self.sliderValue * 1000000)}
-        }                    }
+                OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + ((self.sliderValue-OldAnswersPatients.sharedInstance.directive ) * 1000000)
+                OldAnswersPatients.sharedInstance.directive = self.sliderValue
+                OldAnswersPatients.sharedInstance.answers["Directive"] = String(self.sliderValue)
+        }
 
         override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,11 +20,14 @@
 		0B29A7071C822BA0001ED0C4 /* QuestionLocationTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */; };
 		0B29A70D1C8745AF001ED0C4 /* SignUpThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */; };
 		0B3C4EFE1C8C76FF00F56ED4 /* PickImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */; };
+		0B5D49051CB3F8E0007E7C31 /* OldAnswersPatients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D49041CB3F8E0007E7C31 /* OldAnswersPatients.swift */; };
+		0B5D49071CB43505007E7C31 /* AnswersTherapists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D49061CB43505007E7C31 /* AnswersTherapists.swift */; };
+		0B6CE3251CB94ADE0043D857 /* MatchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6CE3241CB94ADE0043D857 /* MatchPage.swift */; };
 		0B9A023B1C9990B100C4F0C3 /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */; };
 		0BCE55111C6B75100083A2BE /* AdobeHeitiStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */; };
 		0BCE55131C6B75250083A2BE /* STHeiti Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */; };
 		0BCE55171C6B7CBE0083A2BE /* QuestionDirectiveThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */; };
-		0BCE551B1C6B81010083A2BE /* QuestionEthnicityThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE551A1C6B81010083A2BE /* QuestionEthnicityThera.swift */; };
+		0BCE551B1C6B81010083A2BE /* QuestionReligionThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE551A1C6B81010083A2BE /* QuestionReligionThera.swift */; };
 		0BCE551E1C6B8B4E0083A2BE /* QuestionThera3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE551D1C6B8B4E0083A2BE /* QuestionThera3.swift */; };
 		0BD332221C7141F300E5F31D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD332201C7141F300E5F31D /* Realm.framework */; };
 		0BD332231C7141F300E5F31D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD332201C7141F300E5F31D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,7 +41,7 @@
 		0BE801A11C63CD5700E761A6 /* background_image_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE801A01C63CD5700E761A6 /* background_image_Tests.swift */; };
 		0BE801F21C6525AB00E761A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE801F01C6525AB00E761A6 /* Main.storyboard */; };
 		0BE802031C66AF2300E761A6 /* QuestionDirectivePatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802021C66AF2300E761A6 /* QuestionDirectivePatient.swift */; };
-		0BE802051C66AF3300E761A6 /* QuestionEthnicityPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802041C66AF3300E761A6 /* QuestionEthnicityPatient.swift */; };
+		0BE802051C66AF3300E761A6 /* QuestionReligionPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802041C66AF3300E761A6 /* QuestionReligionPatient.swift */; };
 		0BE802071C67BC9E00E761A6 /* QuestionGenderPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */; };
 		0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */; };
 		0BE8020B1C67CF0600E761A6 /* signUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8020A1C67CF0600E761A6 /* signUpPage.swift */; };
@@ -117,11 +120,14 @@
 		0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionLocationTherapist.swift; sourceTree = "<group>"; };
 		0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpThera.swift; sourceTree = "<group>"; };
 		0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickImage.swift; sourceTree = "<group>"; };
+		0B5D49041CB3F8E0007E7C31 /* OldAnswersPatients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldAnswersPatients.swift; sourceTree = "<group>"; };
+		0B5D49061CB43505007E7C31 /* AnswersTherapists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTherapists.swift; sourceTree = "<group>"; };
+		0B6CE3241CB94ADE0043D857 /* MatchPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPage.swift; sourceTree = "<group>"; };
 		0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 		0BCE55101C6B75100083A2BE /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
 		0BCE55121C6B75250083A2BE /* STHeiti Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti Light.ttc"; sourceTree = "<group>"; };
 		0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDirectiveThera.swift; sourceTree = "<group>"; };
-		0BCE551A1C6B81010083A2BE /* QuestionEthnicityThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionEthnicityThera.swift; sourceTree = "<group>"; };
+		0BCE551A1C6B81010083A2BE /* QuestionReligionThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReligionThera.swift; sourceTree = "<group>"; };
 		0BCE551D1C6B8B4E0083A2BE /* QuestionThera3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionThera3.swift; sourceTree = "<group>"; };
 		0BD332201C7141F300E5F31D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0BD332211C7141F300E5F31D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -137,7 +143,7 @@
 		0BE801A01C63CD5700E761A6 /* background_image_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = background_image_Tests.swift; sourceTree = "<group>"; };
 		0BE801F11C6525AB00E761A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BE802021C66AF2300E761A6 /* QuestionDirectivePatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDirectivePatient.swift; sourceTree = "<group>"; };
-		0BE802041C66AF3300E761A6 /* QuestionEthnicityPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionEthnicityPatient.swift; sourceTree = "<group>"; };
+		0BE802041C66AF3300E761A6 /* QuestionReligionPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReligionPatient.swift; sourceTree = "<group>"; };
 		0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGenderPatient.swift; sourceTree = "<group>"; };
 		0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionChildhoodPatient.swift; sourceTree = "<group>"; };
 		0BE8020A1C67CF0600E761A6 /* signUpPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpPage.swift; sourceTree = "<group>"; };
@@ -222,13 +228,16 @@
 		0B3C4EFB1C8C687D00F56ED4 /* Therapist Questions */ = {
 			isa = PBXGroup;
 			children = (
+				0B5D49061CB43505007E7C31 /* AnswersTherapists.swift */,
 				E27168DB1C8BC91900778E22 /* QuestionGenderTherapist.swift */,
 				E27168DD1C8BC96800778E22 /* QuestionChildhoodTherapist.swift */,
 				E27168DF1C8BC9B600778E22 /* QuestionExpertTherapist.swift */,
 				E27168E11C8BCAC900778E22 /* QuestionCostTherapist.swift */,
+				0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */,
 				0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */,
 				0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */,
-				0BCE551A1C6B81010083A2BE /* QuestionEthnicityThera.swift */,
+				0BCE551A1C6B81010083A2BE /* QuestionReligionThera.swift */,
+				0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */,
 			);
 			name = "Therapist Questions";
 			sourceTree = "<group>";
@@ -236,10 +245,11 @@
 		0B3C4EFC1C8C68C800F56ED4 /* Patient Questions */ = {
 			isa = PBXGroup;
 			children = (
+				0B5D49041CB3F8E0007E7C31 /* OldAnswersPatients.swift */,
 				E27168E31C8BCB2100778E22 /* QuestionLocationPatient.swift */,
 				0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */,
 				0BE802021C66AF2300E761A6 /* QuestionDirectivePatient.swift */,
-				0BE802041C66AF3300E761A6 /* QuestionEthnicityPatient.swift */,
+				0BE802041C66AF3300E761A6 /* QuestionReligionPatient.swift */,
 				0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */,
 				0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */,
 				0BD332691C76272100E5F31D /* QuestionExpertPatient.swift */,
@@ -274,12 +284,11 @@
 				0BE8018A1C63CD5700E761A6 /* AppDelegate.swift */,
 				0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */,
 				0BE801F01C6525AB00E761A6 /* Main.storyboard */,
+				0B6CE3241CB94ADE0043D857 /* MatchPage.swift */,
 				0BE8018C1C63CD5700E761A6 /* ViewController.swift */,
 				0B29A7001C80F465001ED0C4 /* Login.swift */,
 				0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */,
-				0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */,
 				0BE8020A1C67CF0600E761A6 /* signUpPage.swift */,
-				0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */,
 				0BCE551D1C6B8B4E0083A2BE /* QuestionThera3.swift */,
 				0BE801911C63CD5700E761A6 /* Images.xcassets */,
 				0BEE93AB1C8F4EEE008BAD43 /* Spring */,
@@ -492,7 +501,7 @@
 				0BEE93CF1C8F4EEE008BAD43 /* DesignableImageView.swift in Sources */,
 				0BEE93CD1C8F4EEE008BAD43 /* BlurView.swift in Sources */,
 				0BEE93D51C8F4EEE008BAD43 /* ImageLoader.swift in Sources */,
-				0BE802051C66AF3300E761A6 /* QuestionEthnicityPatient.swift in Sources */,
+				0BE802051C66AF3300E761A6 /* QuestionReligionPatient.swift in Sources */,
 				0BEE93E11C8F4EEE008BAD43 /* SpringTextField.swift in Sources */,
 				0BE8018D1C63CD5700E761A6 /* ViewController.swift in Sources */,
 				0B3C4EFE1C8C76FF00F56ED4 /* PickImage.swift in Sources */,
@@ -501,12 +510,15 @@
 				0BEE93D01C8F4EEE008BAD43 /* DesignableLabel.swift in Sources */,
 				0BEE93D21C8F4EEE008BAD43 /* DesignableTextField.swift in Sources */,
 				0BEE93E31C8F4EEE008BAD43 /* SpringView.swift in Sources */,
+				0B6CE3251CB94ADE0043D857 /* MatchPage.swift in Sources */,
 				0BD3326A1C76272100E5F31D /* QuestionExpertPatient.swift in Sources */,
+				0B5D49051CB3F8E0007E7C31 /* OldAnswersPatients.swift in Sources */,
 				0B9A023B1C9990B100C4F0C3 /* MatchingAlgorithm.swift in Sources */,
 				0B29A70D1C8745AF001ED0C4 /* SignUpThera.swift in Sources */,
 				0BE802091C67C1E200E761A6 /* QuestionChildhoodPatient.swift in Sources */,
 				0BEE93D31C8F4EEE008BAD43 /* DesignableTextView.swift in Sources */,
 				0BEE93E41C8F4EEE008BAD43 /* TransitionManager.swift in Sources */,
+				0B5D49071CB43505007E7C31 /* AnswersTherapists.swift in Sources */,
 				0BEE93D41C8F4EEE008BAD43 /* DesignableView.swift in Sources */,
 				E27168E21C8BCAC900778E22 /* QuestionCostTherapist.swift in Sources */,
 				0B29A7011C80F465001ED0C4 /* Login.swift in Sources */,
@@ -521,7 +533,7 @@
 				0BEE93DF1C8F4EEE008BAD43 /* SpringImageView.swift in Sources */,
 				0BEE93CB1C8F4EEE008BAD43 /* AsyncImageView.swift in Sources */,
 				0BEE93DA1C8F4EEE008BAD43 /* Misc.swift in Sources */,
-				0BCE551B1C6B81010083A2BE /* QuestionEthnicityThera.swift in Sources */,
+				0BCE551B1C6B81010083A2BE /* QuestionReligionThera.swift in Sources */,
 				0BEE93E21C8F4EEE008BAD43 /* SpringTextView.swift in Sources */,
 				E27168DC1C8BC91900778E22 /* QuestionGenderTherapist.swift in Sources */,
 				0BEE93CE1C8F4EEE008BAD43 /* DesignableButton.swift in Sources */,

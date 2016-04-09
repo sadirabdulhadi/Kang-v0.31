@@ -46,17 +46,11 @@ class QuestionGenderTherapist: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func pressedNext(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                var index = self.pickerData.indexOf(self.data)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 10000)
-                let gender = ["Gender": self.data]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)                          }
-        }                    }
+        var index = self.pickerData.indexOf(self.data)
+        AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + ((index!-AnswersTherapists.sharedInstance.gender) * 10000)
+        AnswersTherapists.sharedInstance.gender = index!
+        AnswersTherapists.sharedInstance.answers["Gender"] = self.data
+                   }
     
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -104,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "background-image+/signUpPage.swift"
-            timestampString = "478243030.650207"
+            timestampString = "481832645.654103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "background-image+/signUpPage.swift"
-            timestampString = "478243504.921302"
+            timestampString = "481832645.654103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "registerButtonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "background-image+/QuestionLocationTherapist.swift"
-            timestampString = "480963884.187673"
+            timestampString = "481575544.474488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "nextPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,41 +168,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "background-image+/QuestionCostPatient.swift"
-            timestampString = "480964917.555848"
+            timestampString = "481563047.83537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "next(_:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "background-image+/MatchingAlgorithm.swift"
-            timestampString = "480527126.181737"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "background-image+/MatchingAlgorithm.swift"
-            timestampString = "480527126.181737"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -217,6 +189,101 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "background-image+/OldAnswersPatients.swift"
+            timestampString = "481557435.505566"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "OldAnswersPatients"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "background-image+/QuestionExpertPatient.swift"
+            timestampString = "481570201.074083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "QuestionExpertPatient"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kang.QuestionExpertPatient.__deallocating_deinit"
+                  moduleName = "Kang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sadir/Documents/Computer%20science/Term%202/App%20Development/Kang-v0.3/background-image+/QuestionExpertPatient.swift"
+                  timestampString = "481834193.991112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kang.QuestionExpertPatient.init (Kang.QuestionExpertPatient.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Kang.QuestionExpertPatient"
+                  moduleName = "Kang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sadir/Documents/Computer%20science/Term%202/App%20Development/Kang-v0.3/background-image+/QuestionExpertPatient.swift"
+                  timestampString = "481834193.991226"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kang.QuestionExpertPatient.init (Kang.QuestionExpertPatient.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Kang.QuestionExpertPatient&gt;"
+                  moduleName = "Kang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sadir/Documents/Computer%20science/Term%202/App%20Development/Kang-v0.3/background-image+/QuestionExpertPatient.swift"
+                  timestampString = "481834193.991319"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "background-image+/MatchingAlgorithm.swift"
+            timestampString = "481891840.013866"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "MatchingAlgorithm"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

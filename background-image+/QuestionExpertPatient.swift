@@ -13,7 +13,7 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    var data="No,I have multiple issues"
+    var data="Don't know/multiple issues"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        pickerData = ["No, multiple or complex issues", "Behavioural control", "Bereavement", "Anxiety, depression or stress", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues"]
+        pickerData = ["Don't know/multiple issues", "Behavioural control", "Bereavement", "Anxiety, depression or stress", "Drug and alcohol problems", "Eating or body image issues", "Obsessions and compulsions", "Relationship issues", "Self-harm", "Sexuality or gender issues"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,17 +31,11 @@ class QuestionExpertPatient: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func nextPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let gender = ["Expertise": self.data]
-                var index = self.pickerData.indexOf(self.data)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (index! * 100)
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(gender)}
-        }                    }
+               var index = self.pickerData.indexOf(self.data)
+               OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + ((index!-OldAnswersPatients.sharedInstance.expertise) * 100)
+                OldAnswersPatients.sharedInstance.expertise = index!
+                OldAnswersPatients.sharedInstance.answers["Expertise"] = self.data
+        }
 
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

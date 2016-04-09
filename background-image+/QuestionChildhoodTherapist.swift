@@ -23,17 +23,11 @@ class QuestionChildhoodTherapist: UIViewController {
     }
     
     @IBAction func next(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + (self.sliderValue * 1000)
-                let childhood = ["Childhood":self.sliderValue]
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(childhood)
-                }
-        }                    }
+        AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + ((self.sliderValue-AnswersTherapists.sharedInstance.childhood ) * 1000)
+        AnswersTherapists.sharedInstance.childhood = self.sliderValue
+        AnswersTherapists.sharedInstance.answers["Childhood"] = String(self.sliderValue)
+
+            }
     
     override func viewDidLoad() {
         super.viewDidLoad()

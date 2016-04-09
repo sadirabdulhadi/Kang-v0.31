@@ -23,13 +23,8 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        /* signUpAsTherapistButton.layer.cornerRadius = 10*/
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
-    
+
     @IBAction func logInPressed(sender: AnyObject) {
         username = email.text!
         pass = password.text!

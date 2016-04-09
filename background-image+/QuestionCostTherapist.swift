@@ -28,13 +28,12 @@ class QuestionCostTherapist: UIViewController {
             if error != nil {
                 print("error")
             } else {
-                let cost = ["cost":self.sliderValue]
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                usersRef.updateChildValues(cost)
-                LoggedInInfo.sharedInstance.score = LoggedInInfo.sharedInstance.score + 1
-                print(LoggedInInfo.sharedInstance.score)
-                let score = ["Score":LoggedInInfo.sharedInstance.score]
-                usersRef.updateChildValues(score)}
+                AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + 1
+                AnswersTherapists.sharedInstance.cost = self.sliderValue
+                AnswersTherapists.sharedInstance.answers["Cost"] = String(self.sliderValue)
+                AnswersTherapists.sharedInstance.answers["Score"] = String(AnswersTherapists.sharedInstance.score)
+                usersRef.updateChildValues(AnswersTherapists.sharedInstance.answers)}
         }                    }
     
     override func viewDidLoad() {
