@@ -20,6 +20,8 @@ class OldAnswersPatients{
     var expertise = 0
     var answers=[String: String]()
     var score = 0
+    var matches =  [[String]]()
+    var literal_score = ""
 
     
     class var sharedInstance : OldAnswersPatients {

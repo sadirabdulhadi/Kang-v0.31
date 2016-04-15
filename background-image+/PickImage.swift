@@ -45,17 +45,12 @@ class PickImage: UIViewController,UIImagePickerControllerDelegate, UINavigationC
     }
     
     @IBAction func buttonPressed(sender: AnyObject) {
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                if self.newImage != nil {
+                      if self.newImage != nil {
                 var imageData: NSData = UIImageJPEGRepresentation(self.newImage,0.1)!
                 AnswersTherapists.sharedInstance.answers["Image"] = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
 
                 }
-            }}}
+            }
     
     
     

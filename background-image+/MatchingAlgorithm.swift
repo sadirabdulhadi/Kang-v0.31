@@ -5,20 +5,14 @@ import Firebase
 class MatchingAlgorithm: UIViewController {
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
     var refpsy = Firebase(url:"https://boiling-heat-1824.firebaseio.com/users/therapists")
+    var therapists = [[String]]()
     
     
     func findMatches(){
-        var temp = [[String]]()
         var finalList = self.refpsy
-        self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
-            error, authData in
-            if error != nil {
-                print("error")
-            } else {
-                let userScore=OldAnswersPatients.sharedInstance.score
-                
-                var matching = finalList.queryOrderedByChild("Score").queryEqualToValue(String(userScore))
-                
+        let userScore=OldAnswersPatients.sharedInstance.score
+        var matching = finalList.queryOrderedByChild("Score").queryEqualToValue("4114111")
+                //String(userScore)
                 matching.observeEventType(.ChildAdded, withBlock: { snapshot in
                     var tempItems = [String]()
                     
@@ -27,14 +21,13 @@ class MatchingAlgorithm: UIViewController {
                         tempItems.append(dict)
                     }
                     
-                    temp.append(tempItems)
-                    print(snapshot)
-                    print(self.temp)
+                    self.therapists.append(tempItems)
                     
-                })}
-        }
+                })
+
     }
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -42,10 +35,4 @@ class MatchingAlgorithm: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
-    
-
-
-
-        }
+}

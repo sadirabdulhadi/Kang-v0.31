@@ -16,6 +16,9 @@ class Login: UIViewController {
     @IBOutlet weak var password: UITextField!
     var username = ""
     var pass = ""
+    var score = String()
+    var temp = [[String]]()
+    
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
@@ -36,12 +39,42 @@ class Login: UIViewController {
             } else {
                 LoggedInInfo.sharedInstance.username=self.username
                 LoggedInInfo.sharedInstance.pass=self.pass
-                self.displayAlertMessage("success")
                 print(ref.authData)
+                let usersRef = ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
+                let refpsy = Firebase(url:"https://boiling-heat-1824.firebaseio.com/users/therapists")
+                
+                //step A : find the path to score
+                let userScorePath = usersRef.childByAppendingPath("Score")
+                
+                //step B : grab the value of score
+                userScorePath.observeEventType(.Value, withBlock: { snapshot in
+                    self.score = String(snapshot.value)
+                    }, withCancelBlock: { error in
+                        print(error.description)
+                })
+
+
+                var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(self.score)
+                
+                matching.observeEventType(.ChildAdded, withBlock: { snapshot in
+                    var tempItems = [String]()
+                    
+                    for item in snapshot.children.allObjects as! [FDataSnapshot] {
+                        let dict = item.value as! (String)
+                        tempItems.append(dict)
+                    }
+                    
+                    self.temp.append(tempItems)
+                    print(snapshot)
+                    OldAnswersPatients.sharedInstance.matches = self.temp
+                    
+                })
             }
+            self.displayAlertMessage("success")
         }
-        
     }
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

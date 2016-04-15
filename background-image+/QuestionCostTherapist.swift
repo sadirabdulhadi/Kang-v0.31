@@ -21,19 +21,20 @@ class QuestionCostTherapist: UIViewController {
         sliderValue = Int(round(sender.value))
         score.text = "£\(sliderValue)"
     }
-    
-    @IBAction func next(sender: AnyObject) {
+    @IBAction func nextPressed(sender: UIButton) {
         self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
             error, authData in
             if error != nil {
                 print("error")
             } else {
+                print("reahed here 1")
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
                 AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + 1
                 AnswersTherapists.sharedInstance.cost = self.sliderValue
                 AnswersTherapists.sharedInstance.answers["Cost"] = String(self.sliderValue)
                 AnswersTherapists.sharedInstance.answers["Score"] = String(AnswersTherapists.sharedInstance.score)
-                usersRef.updateChildValues(AnswersTherapists.sharedInstance.answers)}
+                usersRef.updateChildValues(AnswersTherapists.sharedInstance.answers)
+            print("reahed here 2")}
         }                    }
     
     override func viewDidLoad() {

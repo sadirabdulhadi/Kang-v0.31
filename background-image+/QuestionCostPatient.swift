@@ -31,7 +31,7 @@ class QuestionCostPatient: UIViewController {
         self.ref.authUser(LoggedInInfo.sharedInstance.username, password:LoggedInInfo.sharedInstance.pass) {
             error, authData in
             if error != nil {
-                print("error")
+                print("error at cost")
             } else {
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score + 1
@@ -41,7 +41,7 @@ class QuestionCostPatient: UIViewController {
                 usersRef.setValue( OldAnswersPatients.sharedInstance.answers)
                 
                 //step A : find the path to score
-                let userScorePath = usersRef.childByAppendingPath("Score")
+                 let userScorePath = usersRef.childByAppendingPath("Score")
                 
                 //step B : grab the value of score
                 userScorePath.observeEventType(.Value, withBlock: { snapshot in
@@ -63,10 +63,11 @@ class QuestionCostPatient: UIViewController {
                     
                     self.temp.append(tempItems)
                     print(snapshot)
-                    print(self.temp)
+                    OldAnswersPatients.sharedInstance.matches = self.temp
                     
-                })}
-}
+                })
+            }
+        }
     }
     
         
