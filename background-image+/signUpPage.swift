@@ -15,7 +15,7 @@ class signUpPage: UIViewController {
     var password = ""
     var repeatPassword = ""
     var ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
-    //text fields
+    var canLogin = false
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
@@ -30,7 +30,7 @@ class signUpPage: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
-        if ( (emailField.text == "") || (emailField.text == "UCL email") || (passField.text == "") || (passField.text == "Password") || (repassField.text == "") || (repassField.text == "Retype Password") || (passField.text != repassField.text)){
+        if ( (emailField.text == "") || (emailField.text == "UCL email") || (passField.text == "") || (passField.text == "Password") || (repassField.text == "") || (repassField.text == "Retype Password") || (passField.text != repassField.text) || canLogin == false) || userEmail.hasSuffix("@ucl.ac.uk"){
                 return false
         }
         else {return true}
@@ -63,20 +63,26 @@ class signUpPage: UIViewController {
         }
         
         else{
+            print("hello")
+            if !userEmail.hasSuffix("@ucl.ac.uk") {
+                displayAlertMessage("Not a UCL email")
+                return
 
+            }
             ref.createUser(userEmail, password: password,
                 withValueCompletionBlock: { error, result in
                     if error != nil {
-                    self.displayAlertMessage("error")
+                    self.displayAlertMessage("Error signing up. Email already taken, or connection problem")
+                        return
                     } else {
-                       // ViewController.giveEmail(userEmail)
-                        
-                        
                         self.ref.authUser(self.userEmail, password: self.password) {
                             error, authData in
                             if error != nil {
-                                // Something went wrong. :(
+                                self.displayAlertMessage("Error connecting")
+                                return
+                                
                             } else {
+                                self.canLogin = true
                                 LoggedInInfo.sharedInstance.username=self.userEmail
                                 LoggedInInfo.sharedInstance.pass=self.password
 
@@ -89,7 +95,7 @@ class signUpPage: UIViewController {
 
             
             })
-            performSegueWithIdentifier("nextPage", sender: nil)
+            //performSegueWithIdentifier("nextPage", sender: nil)
             //store data
             //display alert message with confirmation
         }
