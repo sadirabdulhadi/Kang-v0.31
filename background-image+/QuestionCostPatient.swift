@@ -66,7 +66,7 @@ class QuestionCostPatient: UIViewController {
                     OldAnswersPatients.sharedInstance.matches = self.temp
                     
                 })
-                print("hello")
+                print("hellow")
             }
         }
     }

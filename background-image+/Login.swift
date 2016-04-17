@@ -47,16 +47,17 @@ class Login: UIViewController {
                 let userScorePath = usersRef.childByAppendingPath("Score")
                 
                 //step B : grab the value of score
-                userScorePath.observeEventType(.Value, withBlock: { snapshot in
+                /*userScorePath.observeSingleEventOfType(.Value, withBlock: { snapshot in
                     self.score = String(snapshot.value)
+                    print(self.score)
                     }, withCancelBlock: { error in
                         print(error.description)
                 })
 
-
                 var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(self.score)
                 
                 matching.observeEventType(.ChildAdded, withBlock: { snapshot in
+                    print("ana hon")
                     var tempItems = [String]()
                     
                     for item in snapshot.children.allObjects as! [FDataSnapshot] {
@@ -70,7 +71,33 @@ class Login: UIViewController {
                     
                 })
             }
+            self.displayAlertMessage("success")*/
+                userScorePath.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                    var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(String(snapshot.value))
+                    matching.observeEventType(.ChildAdded, withBlock: { snapshot in
+                        print("ana hon")
+                        var tempItems = [String]()
+                        
+                        for item in snapshot.children.allObjects as! [FDataSnapshot] {
+                            let dict = item.value as! (String)
+                            tempItems.append(dict)
+                        }
+                        
+                        self.temp.append(tempItems)
+                        print(snapshot)
+                        OldAnswersPatients.sharedInstance.matches = self.temp
+                        
+                    })
+
+                    }, withCancelBlock: { error in
+                        print(error.description)
+                })
+                
+                var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(self.score)
+                
+                            }
             self.displayAlertMessage("success")
+            
         }
     }
 
