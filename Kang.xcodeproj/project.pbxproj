@@ -29,9 +29,7 @@
 		0BCE55171C6B7CBE0083A2BE /* QuestionDirectiveThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */; };
 		0BCE551B1C6B81010083A2BE /* QuestionReligionThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE551A1C6B81010083A2BE /* QuestionReligionThera.swift */; };
 		0BCE551E1C6B8B4E0083A2BE /* QuestionThera3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCE551D1C6B8B4E0083A2BE /* QuestionThera3.swift */; };
-		0BD332221C7141F300E5F31D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD332201C7141F300E5F31D /* Realm.framework */; };
 		0BD332231C7141F300E5F31D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD332201C7141F300E5F31D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0BD332241C7141F300E5F31D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD332211C7141F300E5F31D /* RealmSwift.framework */; };
 		0BD332251C7141F300E5F31D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD332211C7141F300E5F31D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BD3326A1C76272100E5F31D /* QuestionExpertPatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD332691C76272100E5F31D /* QuestionExpertPatient.swift */; };
 		0BE8018B1C63CD5700E761A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8018A1C63CD5700E761A6 /* AppDelegate.swift */; };
@@ -195,8 +193,6 @@
 				0B22EDD91C7F3D0500CBF57D /* Security.framework in Frameworks */,
 				0B22EDD71C7F3CFB00CBF57D /* CFNetwork.framework in Frameworks */,
 				0B22EDD41C7F3B4C00CBF57D /* Firebase.framework in Frameworks */,
-				0BD332241C7141F300E5F31D /* RealmSwift.framework in Frameworks */,
-				0BD332221C7141F300E5F31D /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

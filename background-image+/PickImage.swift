@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import Firebase
 
 class PickImage: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate{

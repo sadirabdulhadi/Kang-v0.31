@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -469,7 +471,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bulle2" highlightedImage="bulle1" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-td-Gmt">
                                 <rect key="frame" x="1" y="5" width="375" height="473"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Out of 7, how much do you want the therapist to give direct advice?" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-j3-vlY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out of 7, how much do you want the therapist to give direct advice?" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-j3-vlY">
                                 <rect key="frame" x="47.5" y="62" width="280" height="238"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="vsI-9z-yDC"/>
@@ -1302,16 +1304,13 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are now going to be shown your matching therapists" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GM-d4-VIo">
-                                <rect key="frame" x="15" y="291" width="291" height="112"/>
+                                <rect key="frame" x="41" y="291" width="291" height="112"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swoosh" translatesAutoresizingMaskIntoConstraints="NO" id="guf-zG-0sd">
-                                <rect key="frame" x="91" y="147" width="139" height="136"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3a-uA-HtL">
-                                <rect key="frame" x="186" y="222" width="32" height="30"/>
+                                <rect key="frame" x="158" y="448" width="32" height="30"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1319,13 +1318,16 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                                     <segue destination="cgX-0g-6Dc" kind="modal" id="loa-d0-Spg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swoosh" translatesAutoresizingMaskIntoConstraints="NO" id="guf-zG-0sd">
+                                <rect key="frame" x="128" y="147" width="139" height="136"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92827124289999996" blue="0.00094304057190000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km3-7a-AnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4140" y="431"/>
+            <point key="canvasLocation" x="4266.5" y="258.5"/>
         </scene>
         <!--Sign Up Thera-->
         <scene sceneID="Lt0-io-HdR">
@@ -1904,55 +1906,80 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                                 <rect key="frame" x="16" y="20" width="288" height="460"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2v-Sf-1hW">
-                                        <rect key="frame" x="29" y="295" width="230" height="17"/>
+                                        <rect key="frame" x="29" y="295" width="230" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Matches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKX-MS-87S">
-                                        <rect key="frame" x="31" y="23" width="226" height="34"/>
+                                        <rect key="frame" x="36" y="23" width="217" height="48"/>
                                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="34"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPz-pm-QaB">
-                                        <rect key="frame" x="29" y="97" width="230" height="128.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPz-pm-QaB">
+                                        <rect key="frame" x="29" y="101" width="230" height="127"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="0No-IZ-lX5"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="230" id="FuN-WR-alj"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZh-vW-2GQ">
-                                        <rect key="frame" x="25" y="250.5" width="238" height="20.5"/>
+                                        <rect key="frame" x="25" y="253" width="238" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am interested about helping people" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3s-Bd-byo">
-                                        <rect key="frame" x="25" y="291" width="238" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am interested in helping people" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3s-Bd-byo">
+                                        <rect key="frame" x="25" y="294" width="238" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtM-4u-TFV">
-                                        <rect key="frame" x="68" y="347" width="153" height="20.5"/>
+                                        <rect key="frame" x="68" y="332" width="153" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="LMi-qW-a9H"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSx-ei-EnG">
+                                        <rect key="frame" x="103" y="361" width="82" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Prs-WL-oWS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-UR-rvj">
+                                        <rect key="frame" x="121" y="400" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="7fU-CR-iyh" kind="modal" id="Kk6-By-zkO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dtM-4u-TFV" firstAttribute="top" secondItem="O3s-Bd-byo" secondAttribute="bottom" constant="20" id="4Kd-ml-aJJ"/>
-                                    <constraint firstItem="pPz-pm-QaB" firstAttribute="top" secondItem="IKX-MS-87S" secondAttribute="bottom" constant="40" id="86D-bT-atQ"/>
+                                    <constraint firstItem="pPz-pm-QaB" firstAttribute="top" secondItem="IKX-MS-87S" secondAttribute="bottom" constant="30" id="86D-bT-atQ"/>
                                     <constraint firstItem="IKX-MS-87S" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="9Bb-Xy-Xgm"/>
                                     <constraint firstAttribute="bottom" secondItem="P2v-Sf-1hW" secondAttribute="bottom" constant="130" id="9lA-iD-YUq"/>
                                     <constraint firstItem="P2v-Sf-1hW" firstAttribute="leading" secondItem="JIK-E3-WSg" secondAttribute="leading" constant="29" id="9uw-ex-Fpj"/>
                                     <constraint firstItem="bZh-vW-2GQ" firstAttribute="width" secondItem="O3s-Bd-byo" secondAttribute="width" id="CuZ-ZP-0c0"/>
                                     <constraint firstItem="O3s-Bd-byo" firstAttribute="width" secondItem="JIK-E3-WSg" secondAttribute="width" constant="-50" id="G2i-rp-jS1"/>
                                     <constraint firstItem="O3s-Bd-byo" firstAttribute="top" secondItem="bZh-vW-2GQ" secondAttribute="bottom" constant="20" id="Mkm-Lt-rg4"/>
-                                    <constraint firstItem="P2v-Sf-1hW" firstAttribute="top" secondItem="bZh-vW-2GQ" secondAttribute="bottom" constant="24" id="VJ6-jS-zU5"/>
+                                    <constraint firstAttribute="bottom" secondItem="dtM-4u-TFV" secondAttribute="bottom" constant="92" id="RKJ-hI-wi1"/>
+                                    <constraint firstItem="JSx-ei-EnG" firstAttribute="top" secondItem="dtM-4u-TFV" secondAttribute="bottom" constant="20" id="coO-6w-mMb"/>
                                     <constraint firstItem="dtM-4u-TFV" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="egf-Xm-IUC"/>
+                                    <constraint firstItem="JSx-ei-EnG" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="fwO-AL-0ib"/>
                                     <constraint firstItem="bZh-vW-2GQ" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="hmH-GD-jD5"/>
                                     <constraint firstItem="IKX-MS-87S" firstAttribute="top" secondItem="JIK-E3-WSg" secondAttribute="top" constant="23" id="iQY-37-Elm"/>
                                     <constraint firstItem="bZh-vW-2GQ" firstAttribute="top" secondItem="pPz-pm-QaB" secondAttribute="bottom" constant="25" id="jMM-C7-M5Q"/>
+                                    <constraint firstItem="O3s-Bd-byo" firstAttribute="firstBaseline" secondItem="P2v-Sf-1hW" secondAttribute="baseline" id="oY1-at-1i2"/>
                                     <constraint firstItem="pPz-pm-QaB" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="pt4-If-0iD"/>
                                     <constraint firstItem="P2v-Sf-1hW" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="tFE-E1-8HA"/>
-                                    <constraint firstItem="P2v-Sf-1hW" firstAttribute="leading" secondItem="pPz-pm-QaB" secondAttribute="leading" id="vBy-Tb-6CU"/>
                                     <constraint firstItem="P2v-Sf-1hW" firstAttribute="top" secondItem="JIK-E3-WSg" secondAttribute="top" constant="295" id="x0r-As-G1i"/>
                                     <constraint firstAttribute="trailing" secondItem="P2v-Sf-1hW" secondAttribute="trailing" constant="29" id="xZQ-E1-Rvq"/>
                                     <constraint firstItem="O3s-Bd-byo" firstAttribute="centerX" secondItem="JIK-E3-WSg" secondAttribute="centerX" id="zkb-mU-kBa"/>
@@ -1969,6 +1996,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="emailLabel" destination="JSx-ei-EnG" id="tVc-ZA-Pt5"/>
                         <outlet property="imageOfTherapist" destination="pPz-pm-QaB" id="N0n-QT-YVu"/>
                         <outlet property="nameLabel" destination="bZh-vW-2GQ" id="VfQ-b1-F5h"/>
                         <outlet property="phoneLabel" destination="dtM-4u-TFV" id="oL7-XU-Tub"/>
@@ -1976,7 +2004,7 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rF-7t-kzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3762" y="1216"/>
+            <point key="canvasLocation" x="3841" y="1217"/>
         </scene>
         <!--Title-->
         <scene sceneID="CFZ-gG-h4n">
@@ -2067,6 +2095,41 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
             </objects>
             <point key="canvasLocation" x="1511.5" y="1221.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rJy-Kr-XUI">
+            <objects>
+                <viewController id="NFh-b4-7Pw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPI-9v-TR2"/>
+                        <viewControllerLayoutGuide type="bottom" id="wyd-Ax-OVM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CFC-bJ-9NQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In case you don't get any result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgq-mN-JBp">
+                                <rect key="frame" x="41" y="291" width="291" height="112"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-px-POo">
+                                <rect key="frame" x="158" y="448" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swoosh" translatesAutoresizingMaskIntoConstraints="NO" id="Fd2-xy-Hkv">
+                                <rect key="frame" x="128" y="147" width="139" height="136"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92827124289999996" blue="0.00094304057190000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBX-iL-6fS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4640" y="209"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Divorce" width="2716" height="1810"/>
@@ -2076,22 +2139,22 @@ By continuing, you agree to our Terms of Service and Privacy Policy.</string>
         <image name="swoosh" width="517" height="526"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OlJ-fu-qi5"/>
-        <segue reference="QDp-tg-FSX"/>
-        <segue reference="pm6-VY-sgn"/>
+        <segue reference="kJk-kr-vRN"/>
+        <segue reference="emM-Of-BGO"/>
         <segue reference="tpy-hE-gcH"/>
+        <segue reference="pm6-VY-sgn"/>
+        <segue reference="QDp-tg-FSX"/>
+        <segue reference="OlJ-fu-qi5"/>
+        <segue reference="alR-Ea-70s"/>
+        <segue reference="Kk6-By-zkO"/>
         <segue reference="IYa-9f-riX"/>
         <segue reference="pN6-Cw-aZM"/>
         <segue reference="6xi-rT-HgM"/>
-        <segue reference="yzM-1e-mDt"/>
-        <segue reference="alR-Ea-70s"/>
-        <segue reference="Y2Y-0t-6Xl"/>
-        <segue reference="kJk-kr-vRN"/>
-        <segue reference="mgm-HP-ZFJ"/>
-        <segue reference="MdA-5i-FZi"/>
-        <segue reference="6V8-Qj-qEN"/>
         <segue reference="7p3-BS-uIb"/>
         <segue reference="uYA-gp-w5K"/>
+        <segue reference="6V8-Qj-qEN"/>
+        <segue reference="MdA-5i-FZi"/>
+        <segue reference="mgm-HP-ZFJ"/>
         <segue reference="UvZ-iK-NGo"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,15 +15,20 @@ class MatchPage: UIViewController {
     @IBOutlet weak var imageOfTherapist: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    var namex = 3
-    var phonex = 10
+    @IBOutlet weak var emailLabel: UILabel!
+    let namex = 9
+    let phonex = 10
+    let emailx = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(matchesArray)
+        
+        if (matchesArray.endIndex != 0){
         matchesArray = OldAnswersPatients.sharedInstance.matches
         nameLabel.text=matchesArray[indexo][namex]
-        phoneLabel.text=matchesArray[indexo][phonex]
+        phoneLabel.text="Phone number : " + matchesArray[indexo][phonex]
+        emailLabel.text="Email : " + matchesArray[indexo][emailx]
+        print(matchesArray[indexo][namex])
         
         
         
@@ -41,20 +46,28 @@ class MatchPage: UIViewController {
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
     }
+        else { displayAlertMessage("No matches / error. Press 'take the test again'")
+        }}
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Right) {
             viewDidLoad()
             indexo = max(0, indexo-1)
-            //nameLabel.text=matchesArray[indexo][namex]
-           // phoneLabel.text=matchesArray[indexo][phonex]
             
         }
         
         if (sender.direction == .Left) {
             indexo = min(self.matchesArray.endIndex-1, indexo+1)
-            //nameLabel.text=matchesArray[indexo][namex]
-            //phoneLabel.text=matchesArray[indexo][phonex]
             viewDidLoad()
         }
+    }
+
+
+func displayAlertMessage(messageText:String){
+    let myAlert = UIAlertController(title: "Alert", message:messageText, preferredStyle: .Alert);
+    let  okAction=UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler:nil)
+    myAlert.addAction(okAction)
+    
+    self.presentViewController(myAlert, animated: true, completion: nil)
+    
     }}

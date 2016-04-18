@@ -6,7 +6,6 @@
 //  Copyright (c) 2016 UCL. All rights reserved.
 //
 import UIKit
-import RealmSwift
 import Firebase
 
 
