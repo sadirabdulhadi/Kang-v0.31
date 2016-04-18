@@ -11,14 +11,20 @@ import UIKit
 class MatchPage: UIViewController {
     var indexo = 0
     var matchesArray = [[String]]()
-    @IBOutlet weak var firstNameLabel: UITextField!
+    
     @IBOutlet weak var imageOfTherapist: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    var namex = 3
+    var phonex = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(matchesArray)
         matchesArray = OldAnswersPatients.sharedInstance.matches
-        firstNameLabel.text=matchesArray[indexo][3]
+        nameLabel.text=matchesArray[indexo][namex]
+        phoneLabel.text=matchesArray[indexo][phonex]
+        
         
         
         let decodedData = NSData(base64EncodedString: matchesArray[indexo][6], options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
@@ -38,13 +44,17 @@ class MatchPage: UIViewController {
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Right) {
+            viewDidLoad()
             indexo = max(0, indexo-1)
-            firstNameLabel.text=matchesArray[indexo][3]
+            //nameLabel.text=matchesArray[indexo][namex]
+           // phoneLabel.text=matchesArray[indexo][phonex]
             
         }
         
         if (sender.direction == .Left) {
             indexo = min(self.matchesArray.endIndex-1, indexo+1)
-            firstNameLabel.text=matchesArray[indexo][3]
+            //nameLabel.text=matchesArray[indexo][namex]
+            //phoneLabel.text=matchesArray[indexo][phonex]
+            viewDidLoad()
         }
     }}
