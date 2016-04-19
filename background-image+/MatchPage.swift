@@ -14,25 +14,37 @@ class MatchPage: UIViewController {
     
     @IBOutlet weak var imageOfTherapist: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    let namex = 9
-    let phonex = 10
-    let emailx = 3
+    @IBOutlet weak var youtubeLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    let namex = 10
+    let phonex = 11
+    let emailx = 4
+    let locationx = 8
+    let descriptionx = 2
+    let youtubex = 14
+    let genderx = 6
+    let membershipx = 9
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if (matchesArray.endIndex != 0){
         matchesArray = OldAnswersPatients.sharedInstance.matches
-        nameLabel.text=matchesArray[indexo][namex]
+        
+        if(matchesArray.endIndex != 0){
+        
+        nameLabel.text=matchesArray[indexo][namex] + ", "+matchesArray[indexo][locationx]+", membership numer" + matchesArray[indexo][membershipx]
+        youtubeLabel.text="My video link: " + matchesArray[indexo][youtubex]
+        descriptionLabel.text = "Description :" + matchesArray[indexo][descriptionx]
         phoneLabel.text="Phone number : " + matchesArray[indexo][phonex]
         emailLabel.text="Email : " + matchesArray[indexo][emailx]
+        genderLabel.text = "Gender :" + matchesArray[indexo][genderx]
         print(matchesArray[indexo][namex])
         
         
         
-        let decodedData = NSData(base64EncodedString: matchesArray[indexo][6], options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+        let decodedData = NSData(base64EncodedString: matchesArray[indexo][7], options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
         
         let decodedImage = UIImage(data: decodedData!)
 
@@ -45,9 +57,19 @@ class MatchPage: UIViewController {
         
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
+        }
+        else{
+            /*nameLabel.text = "No match found"
+            youtubeLabel.text=""
+            descriptionLabel.text = ""
+            phoneLabel.text=""
+            emailLabel.text=""
+            genderLabel.text = ""
+
+            */
+        }
     }
-        else { displayAlertMessage("No matches / error. Press 'take the test again'")
-        }}
+
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Right) {
@@ -70,4 +92,6 @@ func displayAlertMessage(messageText:String){
     
     self.presentViewController(myAlert, animated: true, completion: nil)
     
-    }}
+    }
+}
+

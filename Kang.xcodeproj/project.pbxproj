@@ -245,6 +245,7 @@
 				E27168E31C8BCB2100778E22 /* QuestionLocationPatient.swift */,
 				0BE802021C66AF2300E761A6 /* QuestionDirectivePatient.swift */,
 				0BE802041C66AF3300E761A6 /* QuestionReligionPatient.swift */,
+				0B29A7001C80F465001ED0C4 /* Login.swift */,
 				0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */,
 				0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */,
 				0BD332691C76272100E5F31D /* QuestionExpertPatient.swift */,
@@ -277,7 +278,6 @@
 			children = (
 				0B3C4EFB1C8C687D00F56ED4 /* Therapist Questions */,
 				0B3C4EFC1C8C68C800F56ED4 /* Patient Questions */,
-				0B29A7001C80F465001ED0C4 /* Login.swift */,
 				0BE8018A1C63CD5700E761A6 /* AppDelegate.swift */,
 				0B9A023A1C9990B100C4F0C3 /* MatchingAlgorithm.swift */,
 				0BE801F01C6525AB00E761A6 /* Main.storyboard */,

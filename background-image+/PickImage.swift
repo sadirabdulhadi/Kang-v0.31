@@ -13,6 +13,8 @@ class PickImage: UIViewController,UIImagePickerControllerDelegate, UINavigationC
     let ref = Firebase(url: "https://boiling-heat-1824.firebaseio.com")
     var newImage: UIImage!
     
+    @IBOutlet weak var youtubeLink: UITextView!
+    @IBOutlet weak var bio: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     
@@ -47,9 +49,15 @@ class PickImage: UIViewController,UIImagePickerControllerDelegate, UINavigationC
                       if self.newImage != nil {
                 var imageData: NSData = UIImageJPEGRepresentation(self.newImage,0.1)!
                 AnswersTherapists.sharedInstance.answers["Image"] = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+                        
+                AnswersTherapists.sharedInstance.answers["Description"] = bio.text
+                AnswersTherapists.sharedInstance.answers["YoutubeLink"] = youtubeLink.text
 
                 }
             }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
     
