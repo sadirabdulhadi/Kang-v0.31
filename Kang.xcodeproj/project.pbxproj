@@ -20,6 +20,7 @@
 		0B29A7071C822BA0001ED0C4 /* QuestionLocationTherapist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */; };
 		0B29A70D1C8745AF001ED0C4 /* SignUpThera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */; };
 		0B3C4EFE1C8C76FF00F56ED4 /* PickImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */; };
+		0B3D35991CC7032E00D8A475 /* moreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D35981CC7032E00D8A475 /* moreInfo.swift */; };
 		0B5D49051CB3F8E0007E7C31 /* OldAnswersPatients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D49041CB3F8E0007E7C31 /* OldAnswersPatients.swift */; };
 		0B5D49071CB43505007E7C31 /* AnswersTherapists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D49061CB43505007E7C31 /* AnswersTherapists.swift */; };
 		0B6CE3251CB94ADE0043D857 /* MatchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6CE3241CB94ADE0043D857 /* MatchPage.swift */; };
@@ -118,6 +119,7 @@
 		0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionLocationTherapist.swift; sourceTree = "<group>"; };
 		0B29A70C1C8745AF001ED0C4 /* SignUpThera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpThera.swift; sourceTree = "<group>"; };
 		0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickImage.swift; sourceTree = "<group>"; };
+		0B3D35981CC7032E00D8A475 /* moreInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreInfo.swift; sourceTree = "<group>"; };
 		0B5D49041CB3F8E0007E7C31 /* OldAnswersPatients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldAnswersPatients.swift; sourceTree = "<group>"; };
 		0B5D49061CB43505007E7C31 /* AnswersTherapists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersTherapists.swift; sourceTree = "<group>"; };
 		0B6CE3241CB94ADE0043D857 /* MatchPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPage.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				E27168DF1C8BC9B600778E22 /* QuestionExpertTherapist.swift */,
 				E27168E11C8BCAC900778E22 /* QuestionCostTherapist.swift */,
 				0B3C4EFD1C8C76FF00F56ED4 /* PickImage.swift */,
+				0B3D35981CC7032E00D8A475 /* moreInfo.swift */,
 				0B29A7061C822BA0001ED0C4 /* QuestionLocationTherapist.swift */,
 				0BCE55161C6B7CBE0083A2BE /* QuestionDirectiveThera.swift */,
 				0BCE551A1C6B81010083A2BE /* QuestionReligionThera.swift */,
@@ -249,6 +252,7 @@
 				0BE802061C67BC9E00E761A6 /* QuestionGenderPatient.swift */,
 				0BE802081C67C1E200E761A6 /* QuestionChildhoodPatient.swift */,
 				0BD332691C76272100E5F31D /* QuestionExpertPatient.swift */,
+				0BE8020A1C67CF0600E761A6 /* signUpPage.swift */,
 				0B29A7041C82266E001ED0C4 /* QuestionCostPatient.swift */,
 			);
 			name = "Patient Questions";
@@ -284,7 +288,6 @@
 				0B6CE3241CB94ADE0043D857 /* MatchPage.swift */,
 				0BE8018C1C63CD5700E761A6 /* ViewController.swift */,
 				0B29A7021C8164E3001ED0C4 /* LoggedInInfo.swift */,
-				0BE8020A1C67CF0600E761A6 /* signUpPage.swift */,
 				0BCE551D1C6B8B4E0083A2BE /* QuestionThera3.swift */,
 				0BE801911C63CD5700E761A6 /* Images.xcassets */,
 				0BEE93AB1C8F4EEE008BAD43 /* Spring */,
@@ -537,6 +540,7 @@
 				0BE802031C66AF2300E761A6 /* QuestionDirectivePatient.swift in Sources */,
 				0BEE93D11C8F4EEE008BAD43 /* DesignableTabBarController.swift in Sources */,
 				0BE8018B1C63CD5700E761A6 /* AppDelegate.swift in Sources */,
+				0B3D35991CC7032E00D8A475 /* moreInfo.swift in Sources */,
 				0B29A7051C82266E001ED0C4 /* QuestionCostPatient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

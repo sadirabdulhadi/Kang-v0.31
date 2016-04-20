@@ -18,7 +18,11 @@ class MatchPage: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var youtubeLabel: UILabel!
+    
+    @IBOutlet weak var expertiseLabel: UILabel!
+    @IBOutlet weak var childhood: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
     let namex = 10
     let phonex = 11
     let emailx = 4
@@ -27,6 +31,9 @@ class MatchPage: UIViewController {
     let youtubex = 14
     let genderx = 6
     let membershipx = 9
+    let childhoodx = 0
+    let expertisex = 5
+    let costx = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +43,14 @@ class MatchPage: UIViewController {
         
         nameLabel.text=matchesArray[indexo][namex] + ", "+matchesArray[indexo][locationx]+", membership numer" + matchesArray[indexo][membershipx]
         youtubeLabel.text="My video link: " + matchesArray[indexo][youtubex]
-        descriptionLabel.text = "Description :" + matchesArray[indexo][descriptionx]
+        descriptionLabel.text = "Description : " + matchesArray[indexo][descriptionx]
         phoneLabel.text="Phone number : " + matchesArray[indexo][phonex]
         emailLabel.text="Email : " + matchesArray[indexo][emailx]
-        genderLabel.text = "Gender :" + matchesArray[indexo][genderx]
+        genderLabel.text = "Gender : " + matchesArray[indexo][genderx]
+        childhood.text="Interest in childhood : " + (matchesArray[indexo][childhoodx]) + "/7"
+        expertiseLabel.text = "Expertise : " + matchesArray[indexo][expertisex]
+        costLabel.text = "Cost : " + matchesArray[indexo][costx] + "£"
+        
         print(matchesArray[indexo][namex])
         
         

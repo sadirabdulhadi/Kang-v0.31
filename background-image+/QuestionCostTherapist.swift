@@ -29,8 +29,8 @@ class QuestionCostTherapist: UIViewController {
             } else {
                 print("reahed here 1")
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("therapists").childByAppendingPath(authData.uid)
-                AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + 1
-                AnswersTherapists.sharedInstance.cost = self.sliderValue
+                AnswersTherapists.sharedInstance.score = AnswersTherapists.sharedInstance.score + ((self.sliderValue/16)-AnswersTherapists.sharedInstance.cost )
+                AnswersTherapists.sharedInstance.cost = (self.sliderValue/16)
                 AnswersTherapists.sharedInstance.answers["Cost"] = String(self.sliderValue)
                 AnswersTherapists.sharedInstance.answers["Score"] = String(AnswersTherapists.sharedInstance.score)
                 usersRef.updateChildValues(AnswersTherapists.sharedInstance.answers)

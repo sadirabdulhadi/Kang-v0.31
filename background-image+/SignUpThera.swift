@@ -22,6 +22,7 @@ class signUpThera: UIViewController {
     var repeatPassword = ""
     var phone = ""
     var membership = ""
+    var canLogin = false
     
     let ref = Firebase(url:"https://boiling-heat-1824.firebaseio.com")
 
@@ -33,7 +34,7 @@ class signUpThera: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if ( (emailField.text == "") || (passField.text == "") || (repassField.text == "") || (nameField.text == "") ||
-            (phoneField.text == "") || (membershipField.text == "")){
+            (phoneField.text == "") || (membershipField.text == "") || (canLogin == false)){
             return false
         }
         else {return true}
@@ -74,16 +75,17 @@ class signUpThera: UIViewController {
             ref.createUser(email, password: password,
                 withValueCompletionBlock: { error, result in
                     if error != nil {
-                        self.displayAlertMessage("error")
+                        self.displayAlertMessage("Error signing up. Email already taken, or connection problem")
+                        return
                     } else {
-                        // ViewController.giveEmail(userEmail)
-                        
-                        
                         self.ref.authUser(self.email, password: self.password) {
                             error, authData in
                             if error != nil {
-                                // Something went wrong. :(
+                                self.displayAlertMessage("Error connecting")
+                                return
+                                
                             } else {
+                                self.canLogin = true
                                 LoggedInInfo.sharedInstance.username=self.email
                                 LoggedInInfo.sharedInstance.pass=self.password
                                 AnswersTherapists.sharedInstance.answers["Name"] = self.name

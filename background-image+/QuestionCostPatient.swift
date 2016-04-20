@@ -35,9 +35,11 @@ class QuestionCostPatient: UIViewController {
             } else {
                 let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score - OldAnswersPatients.sharedInstance.cost + 2
-                
                 OldAnswersPatients.sharedInstance.cost = 2
-                OldAnswersPatients.sharedInstance.answers["Childhood"] = String(self.sliderValue)
+                
+                 OldAnswersPatients.sharedInstance.score =  OldAnswersPatients.sharedInstance.score + ((self.sliderValue/16)-OldAnswersPatients.sharedInstance.cost )
+                 OldAnswersPatients.sharedInstance.cost = (self.sliderValue/16)
+                OldAnswersPatients.sharedInstance.answers["Cost"] = String(self.sliderValue)
                 OldAnswersPatients.sharedInstance.answers["Score"] = String(OldAnswersPatients.sharedInstance.score)
                 //let score = ["Score":LoggedInInfo.sharedInstance.score]
                 usersRef.setValue( OldAnswersPatients.sharedInstance.answers)
