@@ -39,9 +39,13 @@ class MatchPage: UIViewController {
         super.viewDidLoad()
         matchesArray = OldAnswersPatients.sharedInstance.matches
         
-        if(matchesArray.endIndex != 0){
+        if (!matchesArray.isEmpty) {
+            print(matchesArray)
+            print(matchesArray.endIndex)
+            print(indexo)
+            
         
-        nameLabel.text=matchesArray[indexo][namex] + ", "+matchesArray[indexo][locationx]+", membership numer" + matchesArray[indexo][membershipx]
+        nameLabel.text=matchesArray[indexo][namex] + ", "+matchesArray[indexo][locationx]+", Membership number : " + matchesArray[indexo][membershipx]
         youtubeLabel.text="My video link: " + matchesArray[indexo][youtubex]
         descriptionLabel.text = "Description : " + matchesArray[indexo][descriptionx]
         phoneLabel.text="Phone number : " + matchesArray[indexo][phonex]
@@ -70,14 +74,19 @@ class MatchPage: UIViewController {
         view.addGestureRecognizer(rightSwipe)
         }
         else{
-            /*nameLabel.text = "No match found"
+            print(matchesArray.endIndex)
+            print(indexo)
+            nameLabel.text = "No match found"
             youtubeLabel.text=""
             descriptionLabel.text = ""
             phoneLabel.text=""
             emailLabel.text=""
             genderLabel.text = ""
+            childhood.text = ""
+            expertiseLabel.text = ""
+            costLabel.text = ""
 
-            */
+
         }
     }
 

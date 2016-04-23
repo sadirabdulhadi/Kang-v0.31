@@ -17,7 +17,15 @@ class Login: UIViewController {
     var pass = ""
     var score = String()
     var temp = [[String]]()
+    var canLogin = false
     
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        if (canLogin == false){
+            return false
+        }
+        else {return true}
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
@@ -26,7 +34,14 @@ class Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func signUpPressed(sender: AnyObject) {
+            performSegueWithIdentifier("signUp", sender: nil)
+    }
 
+    @IBAction func backPressed(sender: AnyObject) {
+        performSegueWithIdentifier("back", sender: nil)
+
+    }
     @IBAction func logInPressed(sender: AnyObject) {
         username = email.text!
         pass = password.text!
@@ -34,8 +49,12 @@ class Login: UIViewController {
         ref.authUser(username, password: pass){
             error, authData in
             if error != nil {
-                // an error occured while attempting login
+                self.displayAlertMessage("Error signing up. Email already taken, or connection problem")
+                return
+
+                
             } else {
+                self.canLogin=true
                 LoggedInInfo.sharedInstance.username=self.username
                 LoggedInInfo.sharedInstance.pass=self.pass
                 print(ref.authData)
@@ -45,33 +64,7 @@ class Login: UIViewController {
                 //step A : find the path to score
                 let userScorePath = usersRef.childByAppendingPath("Score")
                 
-                //step B : grab the value of score
-                /*userScorePath.observeSingleEventOfType(.Value, withBlock: { snapshot in
-                    self.score = String(snapshot.value)
-                    print(self.score)
-                    }, withCancelBlock: { error in
-                        print(error.description)
-                })
-
-                var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(self.score)
-                
-                matching.observeEventType(.ChildAdded, withBlock: { snapshot in
-                    print("ana hon")
-                    var tempItems = [String]()
-                    
-                    for item in snapshot.children.allObjects as! [FDataSnapshot] {
-                        let dict = item.value as! (String)
-                        tempItems.append(dict)
-                    }
-                    
-                    self.temp.append(tempItems)
-                    print(snapshot)
-                    OldAnswersPatients.sharedInstance.matches = self.temp
-                    
-                })
-            }
-            self.displayAlertMessage("success")*/
-                userScorePath.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                  userScorePath.observeSingleEventOfType(.Value, withBlock: { snapshot in
                     var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(String(snapshot.value))
                     matching.observeEventType(.ChildAdded, withBlock: { snapshot in
                         print("ana hon")
@@ -95,7 +88,6 @@ class Login: UIViewController {
                 var matching = refpsy.queryOrderedByChild("Score").queryEqualToValue(self.score)
                 
                             }
-            self.displayAlertMessage("success")
             
         }
     }

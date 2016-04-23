@@ -230,27 +230,12 @@
                   moduleName = "Kang"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sadir/Documents/Computer%20science/Term%202/App%20Development/Kang-v0.3/background-image+/QuestionExpertPatient.swift"
-                  timestampString = "482804841.371316"
+                  timestampString = "483072895.328004"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Kang.QuestionExpertPatient.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Kang.QuestionExpertPatient"
-                  moduleName = "Kang"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sadir/Documents/Computer%20science/Term%202/App%20Development/Kang-v0.3/background-image+/QuestionExpertPatient.swift"
-                  timestampString = "482804841.371542"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -260,12 +245,12 @@
                   moduleName = "Kang"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Sadir/Documents/Computer%20science/Term%202/App%20Development/Kang-v0.3/background-image+/QuestionExpertPatient.swift"
-                  timestampString = "482804841.371655"
+                  timestampString = "483072895.328366"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -289,22 +274,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "background-image+/Login.swift"
-            timestampString = "482513859.736757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "logInPressed(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -315,6 +284,22 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "background-image+/Login.swift"
+            timestampString = "483072894.273208"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "logInPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

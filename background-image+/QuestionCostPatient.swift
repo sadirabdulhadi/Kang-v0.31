@@ -37,28 +37,33 @@ class QuestionCostPatient: UIViewController {
                 OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score - OldAnswersPatients.sharedInstance.cost + 2
                 OldAnswersPatients.sharedInstance.cost = 2
                 
-                 OldAnswersPatients.sharedInstance.score =  OldAnswersPatients.sharedInstance.score + ((self.sliderValue/16)-OldAnswersPatients.sharedInstance.cost )
-                 OldAnswersPatients.sharedInstance.cost = (self.sliderValue/16)
+                OldAnswersPatients.sharedInstance.score =  OldAnswersPatients.sharedInstance.score + ((self.sliderValue/16)-OldAnswersPatients.sharedInstance.cost )
+                OldAnswersPatients.sharedInstance.cost = (self.sliderValue/16)
                 OldAnswersPatients.sharedInstance.answers["Cost"] = String(self.sliderValue)
                 OldAnswersPatients.sharedInstance.answers["Score"] = String(OldAnswersPatients.sharedInstance.score)
                 //let score = ["Score":LoggedInInfo.sharedInstance.score]
                 usersRef.setValue( OldAnswersPatients.sharedInstance.answers)
                 
                 //step A : find the path to score
-                 let userScorePath = usersRef.childByAppendingPath("Score")
+                // let userScorePath = usersRef.childByAppendingPath("Score")
                 
                 //step B : grab the value of score
-                userScorePath.observeEventType(.Value, withBlock: { snapshot in
-                    print(snapshot.value)
-                    }, withCancelBlock: { error in
-                        print(error.description)
-                })
+                //userScorePath.observeEventType(.Value, withBlock: { snapshot in
+                  //  print(snapshot.value)
+                    //}, withCancelBlock: { error in
+                      //  print(error.description)
+                //})
                  self.userScore=OldAnswersPatients.sharedInstance.score
+                 print(self.userScore)
              
                 var matching = finalList.queryOrderedByChild("Score").queryEqualToValue(String(self.userScore))
+                matching.removeAllObservers()
+                OldAnswersPatients.sharedInstance.matches = []
+
                 
-                matching.observeEventType(.ChildAdded, withBlock: { snapshot in
+               matching.observeEventType(.ChildAdded, withBlock: { snapshot in
                     var tempItems = [String]()
+                    print("working")
                     
                     for item in snapshot.children.allObjects as! [FDataSnapshot] {
                         let dict = item.value as! (String)
