@@ -33,7 +33,8 @@ class QuestionCostPatient: UIViewController {
             if error != nil {
                 print("error at cost")
             } else {
-                let usersRef = self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
+                let usersRef =
+                    self.ref.childByAppendingPath("users").childByAppendingPath("patients").childByAppendingPath(authData.uid)
                 OldAnswersPatients.sharedInstance.score = OldAnswersPatients.sharedInstance.score - OldAnswersPatients.sharedInstance.cost + 2
                 OldAnswersPatients.sharedInstance.cost = 2
                 
@@ -41,19 +42,9 @@ class QuestionCostPatient: UIViewController {
                 OldAnswersPatients.sharedInstance.cost = (self.sliderValue/16)
                 OldAnswersPatients.sharedInstance.answers["Cost"] = String(self.sliderValue)
                 OldAnswersPatients.sharedInstance.answers["Score"] = String(OldAnswersPatients.sharedInstance.score)
-                //let score = ["Score":LoggedInInfo.sharedInstance.score]
                 usersRef.setValue( OldAnswersPatients.sharedInstance.answers)
                 
-                //step A : find the path to score
-                // let userScorePath = usersRef.childByAppendingPath("Score")
-                
-                //step B : grab the value of score
-                //userScorePath.observeEventType(.Value, withBlock: { snapshot in
-                  //  print(snapshot.value)
-                    //}, withCancelBlock: { error in
-                      //  print(error.description)
-                //})
-                 self.userScore=OldAnswersPatients.sharedInstance.score
+                self.userScore=OldAnswersPatients.sharedInstance.score
                  print(self.userScore)
              
                 var matching = finalList.queryOrderedByChild("Score").queryEqualToValue(String(self.userScore))
