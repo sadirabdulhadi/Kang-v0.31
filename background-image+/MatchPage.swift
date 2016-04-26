@@ -95,11 +95,14 @@ class MatchPage: UIViewController {
         if (sender.direction == .Right) {
             viewDidLoad()
             indexo = max(0, indexo-1)
+            print(indexo)
+            viewDidLoad()
             
         }
         
         if (sender.direction == .Left) {
             indexo = min(self.matchesArray.endIndex-1, indexo+1)
+            print(indexo)
             viewDidLoad()
         }
     }
